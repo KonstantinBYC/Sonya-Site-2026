@@ -6,12 +6,13 @@
 */
 .header {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 34px;
   margin: 0px;
   background-color: var(--primary-bg-color);
   /* overflow-x: hidden; */
 }
 .nav {
+  font-family: 'Lato', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +25,7 @@
     margin: 0 auto;
   }
   .nav-link {
-    font-family: 'Montserrat';
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     text-decoration: none;
     font-style: normal;
@@ -47,7 +48,7 @@
     color: var(--primary-font-color);
   }
   .italic-logo {
-    font-style: italic;
+    font-style: bold;
   }
 
   .icon-logo {
@@ -108,7 +109,7 @@
     justify-content: space-between;
   }
   .nav-link {
-    font-family: 'Montserrat';
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     text-decoration: none;
     font-style: normal;
@@ -155,7 +156,7 @@
     justify-content: space-between;
   }
   .nav-link {
-    font-family: 'Montserrat';
+  font-family: 'Lato', sans-serif;
     font-weight: 500;
     text-decoration: none;
     font-style: normal;
@@ -201,7 +202,7 @@
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1176px;
+    min-width: 1200px;
   }
   .nav {
     display: flex;
@@ -219,11 +220,12 @@
     display: none;
   }
   .nav-link.logo {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.11;
-    letter-spacing: -0.03em;
+font-family: 'Lato', sans-serif;
+
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 0.9;
+    letter-spacing: 0.01em;
     align-items: center;
     color: var(--primary-font-color);
   }
@@ -232,14 +234,14 @@
   }
   .nav-list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    min-width: 20%;
+    margin-left: 500px;
+    gap: 69px;
+    text-align: right;
     list-style: none;
-
-    margin-left: 188px;
     padding: 0;
   }
+
   .address {
     margin-left: auto;
   }
@@ -247,26 +249,27 @@
     display: flex;
     align-items: center;
 
-    gap: 18px;
+    gap: 28px;
     list-style: none;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
   .icon-logo {
-    width: 21px;
-    height: 21px;
-    margin-left: 4px;
-    margin-bottom: 5px;
+    width: 36px;
+    height: 36px;
+    margin-left: 14px;
+    margin-bottom: 3px;
   }
   .icon-social {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+    margin-right: 1%;
     transition: fill 250ms var(--timing-function);
   }
   .nav-link {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 22px;
     line-height: 1.1428;
     display: flex;
     align-items: center;
@@ -384,7 +387,7 @@
   fill: var(--accent-color);
 }
 .link-mobile {
-  font-family: 'Montserrat';
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;

@@ -48,6 +48,7 @@
 }
 @media screen and (min-width: 1200px) {
   .container.our-products__container {
+    padding-top: 100px;
     max-width: calc(1136px + (20px * 2));
   }
 }
@@ -129,7 +130,7 @@
 }
 
 .our-products__price {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: calc(17 / 14);
   color: var(--primary-font-color);
@@ -140,7 +141,11 @@
   border: 1px solid var(--bg-color-dots);
   border-radius: 100px;
 }
-
+.our-products__price:hover,
+.our-products__price:focus {
+  background: rgb(219, 214, 214);
+  color: var(--primary-font-color);
+}
 /* Styles Slider */
 
 .our-products__block .swiper-wrapper {

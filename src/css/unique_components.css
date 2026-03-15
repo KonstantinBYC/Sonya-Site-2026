@@ -15,7 +15,7 @@
   border-radius: 20px;
 }
 .unique-components ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--accent-color);
+  background-color: grey;
 }
 .unique-components-container {
   display: flex;
@@ -107,11 +107,11 @@
 }
 .components-list-item:nth-child(1) .component-flip-card-front {
   color: var(--secondary-font-color);
-  background: var(--accent-color);
+  background: grey;
 }
 .components-list-item:nth-child(3) .component-flip-card-front {
   color: var(--secondary-font-color);
-  background: var(--secondary-bg-color);
+  background: silver;
 }
 .component-flip-card-front > picture {
   margin: 0 auto 25px;

@@ -3,7 +3,7 @@
 }
 
 .adv-wrap {
-  background-color: var(--secondary-bg-color);
+  background-color: grey;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -39,8 +39,9 @@
 }
 .advantages-text {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  text-align: justify;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.02em;
 
@@ -70,28 +71,29 @@
 @media screen and (min-width: 1200px) {
   .advantages-container {
     max-width: 1130px;
+    width: 800px;
   }
   .adv-wrap {
     padding-bottom: 50px;
     margin-bottom: 0px;
   }
   .adv-list {
-    gap: 88px;
+    gap: 288px;
     flex-wrap: nowrap;
     justify-content: center;
   }
-
   .adv-list-item {
+    max-width: 330px;
     position: relative;
   }
   .adv-list-item:not(:last-of-type)::after {
-    content: '';
+    content:'';
     display: inline-block;
-    width: 124px;
+    width: 44px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transform: rotate(90deg);
     position: absolute;
-    top: 120px;
-    left: 264px;
+    top: 222px;
+    left: 430px;
   }
 }
