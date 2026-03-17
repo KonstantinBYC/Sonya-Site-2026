@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+  <link rel="icon" type="image/svg+xml" href="/YArt-1/assets/favicon-c1d6ca9a.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yaroshenko Art</title>
+
+  
+  <!-- FAVIVCON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/YArt-1/assets/apple-touch-icon-dc753229.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABTVJREFUWEfFV2lIVU0Yfk6ZqUW5gwYVIS0q9ktyIUrUCMlEbYEwMSxEDERFEv0hGEkqimCCpJFIJUlSbuWCobkjIqiQJpigIJiKuGRaeeJ5+Y5cr9flfiENXObeO+fMvPM+y7yjqKqqLiwsgO3AgQOYnZ2Vnm1xcRGWlpbS79a4Mj8/r5qYmMgCv379gqmpqfRs/H9lZUX63Rr/9wGsrq6qu5ni7SBUZmZmVGMwn5+fR2trK1ZXVwWupaUl6RVFgaurK1xcXIzijLK8vKzqYy6A/9d0OdHd3Y2goCBZgAuqqio9GwOysLBAVVUVzp07t2PObAggIiICb968kQmuX7+O58+fCynb29sRGhqKixcvyn/79u2TRffu3Sv9z58/wXc/ffqEiooKeHh47IjUAsHy8jLy8vLw+fNneZkTsu3ZswdXr14FZdrU1ISAgACUlZXJYoZkSQlHRUWhurpaAiX+DJ5Bsv3+/VsCP3HiBO7fv48jR45AMuDu7o7JyUl4e3vLQ9oLTDElyM+lS5cQFhaGubm5LX1iZmYGNTU1aGhowPfv39cyxLk4L2Xd2dkJOzs7NDY2QqmurlYDAwMxMDCAo0ePruFJbPfv37+lD/AZ7pC7MsYnhoaGcPbsWQlUefHihXrnzh1MT0/jwYMHKCoqksk4+fv374VQukY0MTGBJ0+eoL6+HqOjo0JEptTf3x93797FqVOntjWyHz9+wNbWFiUlJVDKysrUW7duYWpqSibQCMggiouLER4eviarp0+fIjk5GY6Ojrh27RqcnJxgbm6Ovr4+eY/BpaamIiEhQTaxmZUzY9bW1igsLIRSXFys3rt3D8Tu9evXqK2tXWN3eno6bGxsBPNHjx7J5+HDh4iOjpas6J4dhCIjI0OeSUxMREpKyqZnC3nEDLx69QpKaWmpyl0yA2ZmZgYxb25uxuXLl5Gfny9E1IWE3zXV8HtBQQHi4uLw4cMHeHl5GTxbCBs3RjnvKAA/Pz9JdWVlpUiQqSVf3r59K1y5cuWK7J7MJsvpF3yG2TR0uK0LQBcCTq7v3WSss7MzysvLRduHDx+Gj48PRkZGJAgSKjc3F8ePH5cAraysxEtCQkIwPj4ugetb/ToIdEl46NChDfVAV1eXGBAnc3BwwMePH8GMtLS0iO8z4La2Npw/f170ffLkSdDYSFQSMzg4eMPZsI6EujJkOvVTxp2TI5QpnZFpvXnzJr59+4aDBw9Kypk5jVRckAcUf798+VKC168n1slwuwDo7dQ4oeCuKLUzZ84gOztb1MAAnj17JtKjmdETvn79itOnT0u26LJbBrAdBMyIvb29kCwmJkYgysrKwuPHj8W6mRXCQdmlpaXJOA2GfjE8PCyw6dcbm/qAIRJywvj4eDmMWAcwC/T4uro6sVK+Q1OiTLkQd+vm5gZfX18xGkM1ptE+MDY2JpbMHdMdyWxD3s+D7Pbt20JK1g7kwbYy3IkR0eU4KfVNr8/JyRFsdYtYqiUpKQmDg4N49+4dPD09N60HjPIB3RT29vYK2RgMyUZ/YBBfvnwRX+CiTPuxY8cM1gva2WCUDxgqKvv7++W8J8mIOY9x1gsXLlzY0b2CJKRhUT1KR0eHysh50t24cWOtgNAqIuJKpmt1n1aC/c04q6rIyEj09PRA7gWUDEsy7kYrMrWiVLfw1P3+f8c18sbGxiIzMxOKdi+gidBuiRMrITZaKitdmg0bGU0J/s04XVIr3zmX0feC7S4axo4bvBfs5l1Q/6757wMw9mpmbIq3uu7zNP0DuqpWCJBtyicAAAAASUVORK5CYII=" />
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAelJREFUOE+lU73LcXEYvo6kJCwYLKSUwcZmsBmM0klKkcXHYlAng3xMyCAGpcSglDJalFWUCX+AMrD5SseA8/S7ix7vW2/v03Pq9Ov+nftc93Vd931zoihKAPB8PtkBmUxG5//G3K8BrtcrMeA4jipLkoTz+YxcLofD4UCxRqNBqVSCWq3+ixl3Op2kyWSCRCJBACyx3++jWCzCbrfTD6vViuJAIAC5XE55SqUSHo8HnCAIksFggF6vJ/3sdblc0Ol0VJ3FjN1+v8dsNsPj8SAAFu92O3A8z0s+nw/BYBA8z6PT6WC73VLFy+VCAKxaoVCA0Wh8m3y/3xGJRMD5/X6pUqlgOp3CYrHAbDYjHA6jXq/DZDKRBAaYTCbR6/XIj9fzBmBVX9qq1SocDge0Wi2xYJSz2SxutxsWiwVSqdQnAJPAAF5PNBpFq9VCLBYDA2MS0uk0Go0G3XW7XUp9S/gTIJPJIB6PYzweY7PZkJFWqxVutxvNZpNAPwCYB98lLJdL1Go1tNttcp11wOl0UpsZfZvN9m8PmGnD4RCDwQBer5eSR6MRdYl16zXi7J5MDIVCEmsRm4Pvu3A8HjGfz0kCmwuVSvXxnc1APp8Ht16vpXK5DFEUf7RMCoUCgiCAe+3CT7fwlf9rgC/NwyY4uT3k9wAAAABJRU5ErkJggg==" />
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
+  <link rel="mask-icon" href="./public/safari-pinned-tab.svg" color="#271805" />
+  <meta name="msapplication-TileColor" content="#b91d47" />
+  <meta name="theme-color" content="#681111" />
+
+  <!-- NORMALIZE -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- css -->
+  
+
+    <!-- fonts! -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2/dist/simple-lightbox.min.css">
+
+  <script type="module" crossorigin src="/YArt-1/assets/index-8ff91ab0.js"></script>
+  <link rel="stylesheet" href="/YArt-1/assets/index-e80186eb.css">
+</head>
+
+<body>
+
+  <header class="header" id="header">
+  <div class="container header-nav">
+    <nav class="nav">
+      <a href="./index.html" class="nav-link logo"><span>YAROSHENKO SOFIYA</span>
+        <svg class="icon-logo">
+          <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-camera"></use>
+        </svg>
+      </a>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+        <a href="#about" id="about" class="nav-link">Über mich</a>
+        </li>
+        <li class="nav-item">
+        <a href="#price" id="gallery" class="nav-link">Preis</a>
+        </li>
+        <li class="nav-item">
+        <a href="#gallery" id="price" class="nav-link">Galerie</a>
+        </li>
+        </ul>
+
+      <button type="button" class="mobile-menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="mobile-menu-open_icon">
+          <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
+    </nav>
+    <address class="address">
+
+
+      <ul class="nav-list-social">
+        <li>
+          <a href="https://www.instagram.com/yaroshenko.art/" class="nav-link" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="icon-social">
+              <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </address>
+  </div>
+</header>
+
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <div class="mobile-menu-container">
+    <button class="menu-toggle js-close-menu">
+      <svg class="icon-x-close">
+        <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu">
+      <li><a href="#about" id="about" class="link-mobile">Über mich</a></li>
+      <li><a href="#gallery" id="gallery" class="link-mobile">Galerie</a></li>
+      <li><a href="#price" id="price" class="link-mobile">Preis</a></li>
+    </ul>
+
+    <ul class="menu-list-social">
+      <li>
+        <a href="https://www.instagram.com/" class="nav-link-mobile-menu" target="_blank">
+          <svg class="icon-social white">
+            <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      </ul>
+  </div>
+</div>
+  <section id="hero" class="hero">
+  
+  <div class="gallery">
+
+    <h1 class="hero-title visually-hidden">Hero</h1>
+    <h2 class="hero-desc">
+      MUNICH
+    </h2>
+    <h3 class="hero-desc-2">photographer</h3>
+
+ <img src="/YArt-1/assets/img-1-0e890287.jpg" class="photo photo-1" alt="">
+ <img src="/YArt-1/assets/img-2-a310b525.jpg"  class="photo photo-2" alt="">
+ <img src="/YArt-1/assets/img-3-ace98091.jpg" class="photo photo-3" alt="">
+ <img src="/YArt-1/assets/img-4-5416f9c8.jpg" class="photo photo-4" alt="">
+    <!-- накладені маленькі фото -->
+ <img src="/img/products/stu-1.jpg" class="photo photo-5" alt="">
+ <img src="/YArt-1/assets/img-5-cc23d021.jpg"  class="photo photo-6" alt="">
+ <img src="/YArt-1/assets/img-6-a5d62c3d.jpg" class="photo photo-7" alt="">
+ <img src="/YArt-1/assets/img-7-a14340b0.jpg" class="photo photo-8" alt="">
+ <img src="/YArt-1/assets/img-8-acc721a8.jpg" class="photo photo-9" alt="">
+ <img src="/YArt-1/assets/img-9-477a4fbb.jpg"  class="photo photo-10" alt="">
+ <img src="/YArt-1/assets/img-10-4795b822.jpg" class="photo photo-11" alt="">
+ <img src="/YArt-1/assets/img-11-e1b3f785.jpg" class="photo photo-12" alt="">
+ <img src="/YArt-1/assets/img-12-58e4b593.jpg" class="photo photo-13" alt="">
+ <img src="/YArt-1/assets/img-13-91de4b20.jpg" class="photo photo-14" alt="">
+ <img src="/YArt-1/assets/img-1-0e890287.jpg" class="photo photo-15" alt="">
+ <img src="/YArt-1/assets/img-1-0e890287.jpg" class="photo photo-16" alt="">
+ 
+</div>
+
+    <div class="button-hero-cont">
+      <div class="scroll-down-cont">
+        <p class="scroll-down">nach unten scrollen</p>
+        <a class="scroll-down-button" href="#footer">
+          <svg class="icon-scroll-down" width="22" height="22">
+            <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-scroll-down"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+</section>
+  <section id="about" class="about adv-wrap">
+  <div class="container advantages-container">
+    <h2 class="visually-hidden">Advantages</h2>
+    <ul class="list adv-list">
+
+      <li class="adv-list-item">
+        <div class="adv-icon-circle">
+          <svg width="32px" height="32px" class="adv-icon">
+            <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-camera"></use>
+          </svg>
+        </div>
+
+        <p class="adv-hdr">Über mich</p>
+        <p class="advantages-text">
+              Ich fotografiere Menschen und ihre Geschichten – ruhig, ehrlich und mit viel Feingefühl.<br>
+Meine Bilder sind emotional und zeitlos, mit Fokus auf echte Momente und Verbindungen. Ich arbeite minimalistisch, ruhig und mit einem zeitlosen Blick auf Menschen und ihre Verbindung zueinander.
+<br>
+Mich inspirieren natürliches Licht, klare Kompositionen und die kleinen, oft unbeobachteten Augenblicke, die eine Geschichte erzählen.
+<br>So entstehen Bilder, die persönlich sind und bleiben.<br>
+
+Beim Shooting nehme ich mir Zeit, begleite euch aufmerksam und helfe sanft beim Posing – so entstehen natürliche, emotionale Bilder, die sich leicht und echt anfühlen.</p>
+      </li>
+
+      <li class="adv-list-item">
+        <img src="/YArt-1/assets/uber-34bda035.jpg" class="photo-4" alt="">
+      </li>
+          
+
+    </ul>
+  </div>
+</section>
+
+  <section class="unique-components" id="price">
+    <div class="container unique-components-container">
+        <h2 class="unique-components-heading">
+            Angebote / Preise
+        </h2>
+
+               <ul class="components-list">
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="
+                    /img/hero/img-1.jpg    1x,
+                    /img/hero/img-1.jpg-tab-mob@2x.png 2x
+                  " media="(max-width: 1199px)" />
+
+                                <source srcset="/YArt-1/assets/img-1-0e890287.jpg 1x, /YArt-1/assets/img-1-0e890287.jpg 2x" media="(min-width: 1200px)" />
+
+                                <img src="/YArt-1/assets/img-1-0e890287.jpg" alt="top cameras"
+                                    loading="lazy" />
+                            </picture>
+                            <p>Personal / Portrait</p>
+                        </div>
+
+
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">Personal / Portrait / Couple / Event</p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">
+                                    200 €
+                                </button>
+                            
+                            </div>
+                            <p class="component-flip-card-back-description">
+                               Leistungen:
+Stunde exklusives Fotoshooting
+Persönliche Styling-Beratung
+(Auswahl von Outfits aus deiner eigenen Garderobe)
+150–200 hochwertig bearbeitete Fotos
+inklusive Farbkorrektur und Retusche
+Fertige Bilder innerhalb von 10 Tagen
+ </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/YArt-1/assets/ingredients2-desk@2x-463ed466.png 1x, /YArt-1/assets/ingredients2-desk@2x-463ed466.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/YArt-1/assets/img-3-ace98091.jpg 1x, /YArt-1/assets/ingredients2-desk@2x-463ed466.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/YArt-1/assets/img-1-0e890287.jpg" alt="equipment" loading="lazy" />
+                            </picture>
+                            <p>Studio</p>
+                        </div>
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">Studio</p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">100 €</button>
+                               
+                            </div>
+                            <p class="component-flip-card-back-description">
+                               Studiomiete ist nicht im Preis enthalten
+Durchschnittlicher Studio­preis: 100 € / Stunde
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/YArt-1/assets/ingredients3-desk@2x-5e469477.png 1x, /YArt-1/assets/ingredients3-desk@2x-5e469477.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/YArt-1/assets/img-4-5416f9c8.jpg 1x, /YArt-1/assets/ingredients3-desk@2x-5e469477.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/YArt-1/assets/ingredients3-desk@2x-5e469477.png" alt="studio" loading="lazy" />
+                            </picture>
+                            <p>Hochzeiten</p>
+                        </div>
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">Hochzeiten</p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">700 €</button>
+                             
+                            </div>
+                            <p class="component-flip-card-back-description">
+                                Hochzeitspaket bis 4 Stunden — 700 €
+Bis zu 4 Stunden fotografische Begleitung
+Dezente, dokumentarische Hochzeitsreportage
+600–800 edel bearbeitete Bilder
+inklusive Farbkorrektur und Retusche
+Lieferung innerhalb von 10 Tagen </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/YArt-1/assets/ingredients4-desk@2x-3befbf99.png 1x, /YArt-1/assets/ingredients4-desk@2x-3befbf99.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/YArt-1/assets/img-5-cc23d021.jpg 1x, /YArt-1/assets/ingredients4-desk@2x-3befbf99.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/YArt-1/assets/ingredients4-desk@2x-3befbf99.png" alt="software"
+                                    loading="lazy" />
+                            </picture>
+                            <p>Hochzeitspaket</p>
+                        </div>
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">
+                               Hochzeitspaket bis 8 Stunden
+                            </p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">
+                                   1300 €
+                                </button>
+                           
+                            </div>
+                            <p class="component-flip-card-back-description">
+                               Bis zu 8 Stunden fotografische Begleitung
+Umfassende Begleitung eures Hochzeitstages
+1200–1600 edel bearbeitete Bilder
+inklusive Farbkorrektur und Retusche
+Lieferung innerhalb von 10 Tagen</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+  <section id="gallery" class="section__our-products">
+  <div class="our-products__container container">
+    <h2 class="our-products__title">
+      GALERIE
+    </h2>
+
+    <div class="our-products__block">
+      <ul class="our-products__list swiper-wrapper list">
+
+        <li class="our-products__item swiper-slide">
+          <img srcset="
+           ./img/hero/img-1.jpg    1x,
+          ./img/hero/img-1.jpg@2x.jpg 2x
+        " src="/YArt-1/assets/img-1-0e890287.jpg" alt="products3" loading="lazy" class="our-products__image" width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">Personal</h3>
+            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <button class="our-products__price open-gallery" data-gallery="personal">Fotos</button>
+          </div>
+        </li>
+
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+         ./img/hero/img-9.jpg    1x,
+          ./img/hero/img-9.jpg@2x.jpg 2x
+        " src="/YArt-1/assets/img-9-477a4fbb.jpg" alt="products5" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">Studio</h3>
+            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <button class="our-products__price open-gallery" data-gallery="studio">Fotos</button>
+          </div>
+        </li>
+
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+          ./img/hero/img-7.jpg    1x,
+          ./img/hero/img-7.jpg@2x.jpg 2x
+        " src="/YArt-1/assets/img-7-a14340b0.jpg" alt="products6" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">Hochzeiten</h3>
+            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <button class="our-products__price open-gallery" data-gallery="hochzeiten">Fotos</button>
+          </div>
+        </li>
+
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+         ./img/hero/img-8.jpg    1x,
+          ./img/hero/img-8.jpg@2x.jpg 2x
+        " src="/YArt-1/assets/img-12-58e4b593.jpg" alt="products7" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">Hochzeitspaket</h3>
+            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <button class="our-products__price open-gallery" data-gallery="hochzeitspaket">Fotos</button>
+          </div>
+        </li>
+       </ul>
+    
+
+
+    <!-- Приховані галереї (не видно на сторінці) -->
+<div class="hidden-galleries">
+  <!-- Весільна -->
+  <div class="personal-gallery item_gallery" id="personal" style="display: none;">
+    <a href="/img/hero/img-1.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-1-0e890287.jpg" alt="">
+    </a>
+    <a href="/img/hero/img-8.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-8-acc721a8.jpg" alt="">
+    </a>
+       <a href="/img/hero/img-13.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-13-91de4b20.jpg" alt="">
+    </a>
+  </div>
+
+  <!-- Сімейна -->
+   <div class="studio-gallery item_gallery" id="studio" style="display: none;">
+       <a href="/img/hero/img-9.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-9-477a4fbb.jpg" alt="">
+    </a>
+    <a href="/img/hero/img-10.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-10-4795b822.jpg" alt="">
+    </a>
+       <a href="/img/hero/img-11.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-11-e1b3f785.jpg" alt="">
+    </a>
+  </div>
+
+  <!-- Love story -->
+  <div class="hochzeiten-gallery item_gallery" id="hochzeiten" style="display: none;">
+      <a href="/img/hero/img-2.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-2-a310b525.jpg" alt="">
+    </a>
+    <a href="/img/hero/img-4.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-4-5416f9c8.jpg" alt="">
+    </a>
+       <a href="/img/hero/img-6.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-6-a5d62c3d.jpg" alt="">
+    </a>
+  </div>
+</div>
+    
+  <!-- Love story -->
+  <div class="hochzeitspaket-gallery item_gallery" id="hochzeitspaket" style="display: none;">
+     <a href="/img/hero/img-7.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-7-a14340b0.jpg" alt="">
+    </a>
+    <a href="/img/hero/img-12.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-12-58e4b593.jpg" alt="">
+    </a>
+       <a href="/img/hero/img-4.jpg" data-title="img1">
+      <img src="/YArt-1/assets/img-4-5416f9c8.jpg" alt="">
+    </a>
+  </div>
+</div>
+
+      </div>
+    <div class="our_products__swiper-pagination"></div>
+  </div>
+</section>
+  <footer class="footer-section" id="footer">
+    <div class="container">
+        <div class="footer-content">
+            <b class="footer-text"><span class="footer-accent-text">Ein Fotoshooting</span> ist die perfekte Möglichkeit, die schönsten Erinnerungen festzuhalten.</b>
+            <div class="footer-contact-container">
+                <address class="footer-contact">
+                    <b class="footer-contact-text">Kontaktieren Sie mich</b>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item"><a href="tel:+491711130312"
+                                class="footer-contact-link">+49 171 113-03-12</a></li>
+                        <li><a href="mailto:simplychoc@gmail.com"
+                                class="footer-contact-link">sophiayaroshenk@gmail.com</a>
+                        </li>
+                    </ul>
+                </address>
+                <ul class="footer-social-media-list">
+                    <li><a href="https://www.instagram.com/yaroshenko.art/" class="footer-social-media-link" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><svg class="footer-icon">
+                                <use href="/YArt-1/assets/sprite-f42b4e2f.svg#icon-instagram"></use>
+                            </svg></a></li>                  
+                </ul>
+            </div>
+        </div>
+        <ul class="footer-navigation-list">
+            <li class="footer-navigation-item"><a href="#header" class="footer-navigation-link">Heim</a></li>
+            <li class="footer-navigation-item"><a href="#about" class="footer-navigation-link">Über mich</a></li>
+            <li class="footer-navigation-item"><a href="#price" class="footer-navigation-link">Preis</a></li>
+            <li class="footer-navigation-item"><a href="#gallery" class="footer-navigation-link">Galerie</a>
+            </li>
+                    </ul>
+    </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2/dist/simple-lightbox.min.js"></script>
+
+  
+
+<script>
+  // Ініціалізуємо всі галереї (вони невидимі, тому нічого не заважає)
+  const galleries = {};
+  galleries.personal = new SimpleLightbox('#personal a', { /* опції */ });
+  galleries.studio  = new SimpleLightbox('#studio a',  { /* опції */ });
+  galleries.hochzeiten    = new SimpleLightbox('#hochzeiten a',    { /* опції */ });
+  galleries.hochzeitspaket    = new SimpleLightbox('#hochzeitspaket a',    { /* опції */ });
+
+  // Однакові опції для всіх
+  const options = {
+    captions: true,
+    captionType: 'title',
+    navText: ['←', '→'],
+    swipeClose: true,
+    showCounter: true,
+    docClose: true,
+    fadeSpeed: 300
+  };
+
+  // Краще так — один раз опції
+  Object.keys(galleries).forEach(key => {
+    galleries[key] = new SimpleLightbox(`#${key} a`, options);
+  });
+
+  // Обробка кліків по кнопках
+  document.querySelectorAll('.open-gallery').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const galId = this.getAttribute('data-gallery');
+      const gallery = galleries[galId];
+      
+      if (gallery) {
+        gallery.open();  // відкриває галерею з першого фото
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>
