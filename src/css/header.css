@@ -47,10 +47,6 @@
     letter-spacing: -0.03em;
     color: var(--primary-font-color);
   }
-  .italic-logo {
-    font-style: bold;
-  }
-
   .icon-logo {
     width: 21px;
     height: 21px;

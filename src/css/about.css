@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 62px;
+  width: 132px;
   height: 62px;
 
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -24,7 +24,7 @@
   margin-bottom: 22px;
 }
 .adv-icon {
-  fill: var(--accent-color);
+  fill: white;
 }
 .adv-hdr {
   margin-bottom: 18px;
@@ -33,7 +33,7 @@
 
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
   color: var(--secondary-font-color);
 }
@@ -41,7 +41,7 @@
   font-style: normal;
   font-weight: 500;
   text-align: justify;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.2;
   letter-spacing: -0.02em;
 
@@ -93,7 +93,7 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     transform: rotate(90deg);
     position: absolute;
-    top: 222px;
+    top: 272px;
     left: 430px;
   }
 }
