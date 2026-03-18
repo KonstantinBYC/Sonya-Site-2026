@@ -13,9 +13,10 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
 
 :root {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Belanosima', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -50,7 +51,7 @@ html {
 
 
 body {
- font-family: 'Lato', sans-serif;
+ font-family: 'Belanosima', sans-serif;
 
   font-weight: 400;
   font-size: 14px;
@@ -62,7 +63,7 @@ body {
 }
 
 .list {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Belanosima', sans-serif;
 
   list-style: none;
   padding: 0;
@@ -110,7 +111,7 @@ h2,
 h3,
 p,
 ul {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Belanosima', sans-serif;
 
   margin: 0px;
 }
@@ -135,4 +136,22 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.belanosima-regular {
+  font-family: "Belanosima", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.belanosima-semibold {
+  font-family: "Belanosima", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.belanosima-bold {
+  font-family: "Belanosima", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }

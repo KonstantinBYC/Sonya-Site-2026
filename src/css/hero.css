@@ -215,9 +215,9 @@
   line-height: 1.6;
   letter-spacing: -0.03em;
   color: var(--primary-font-color);
-    right: 5vw;
+ 
     top: 8vh;
-right: 12vh;
+right: 4.2vw;
   max-width: 408px;
    z-index: 30;
 }

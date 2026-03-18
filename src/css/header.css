@@ -12,7 +12,7 @@
   /* overflow-x: hidden; */
 }
 .nav {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Belanosima', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@
     margin: 0 auto;
   }
   .nav-link {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Belanosima', sans-serif;
     font-weight: 500;
     text-decoration: none;
     font-style: normal;
@@ -105,7 +105,7 @@
     justify-content: space-between;
   }
   .nav-link {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Belanosima', sans-serif;
     font-weight: 500;
     text-decoration: none;
     font-style: normal;
@@ -152,7 +152,7 @@
     justify-content: space-between;
   }
   .nav-link {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Belanosima', sans-serif;
     font-weight: 500;
     text-decoration: none;
     font-style: normal;
@@ -216,7 +216,7 @@
     display: none;
   }
   .nav-link.logo {
-font-family: 'Lato', sans-serif;
+font-family: 'Belanosima', sans-serif;
 
     font-weight: 400;
     font-size: 39px;
@@ -383,7 +383,7 @@ font-family: 'Lato', sans-serif;
   fill: var(--accent-color);
 }
 .link-mobile {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Belanosima', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
