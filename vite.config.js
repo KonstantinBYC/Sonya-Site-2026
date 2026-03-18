@@ -4,6 +4,7 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
+  base: '/Sonya-Site-2026/', 
   root: 'src',
   build: {
     rollupOptions: {
@@ -13,3 +14,4 @@ export default defineConfig({
   },
   plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
 });
+

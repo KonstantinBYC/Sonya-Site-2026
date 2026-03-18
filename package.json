@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/YArt-1/",
-    "preview": "vite preview"
-  },
+    "build": "vite build --base=/Sonya-Site-2026/",
+    "deploy": "npm run build && gh-pages -d dist -b gh-pages"
+     },
   "devDependencies": {
     "vite": "^4.0.0",
     "glob": "^8.1.0"

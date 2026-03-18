@@ -1,23 +1,8 @@
-/* --primary-bg-color: #e2e2e2; */
-/* --secondary-bg-color: #111111;
-  --primary-font-color: #111111;
-  --secondary-font-color: #ffffff;
-  --advantages-font-color: rgba(255, 255, 255, 0.7);
-  --accent-color: #fd9222;
-  --descr-font-kolor: rgba(17, 17, 17, 0.7);
-
-  --bg-color-dots: rgba(17, 17, 17, 0.1);
-  --fill-close-button: rgba(241, 101, 41, 1),
-  rgba(212, 69, 40, 1); */
-/* --input-font-color: rgba(64, 64, 64, 0.3); */
-
-/* --timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-
 .footer-section {
   padding: 32px 0;
   padding-bottom: 32px;
-  background-color: black;
-  color: var(--secondary-font-color);
+  background-color: rgb(216, 216, 216);
+  color: black;
 }
 
 .footer-section .container {
@@ -28,7 +13,7 @@
 .footer-content {
   margin-bottom: 32px;
   padding-bottom: 32px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
 }
 
 .footer-text {
@@ -40,12 +25,9 @@
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: -0.02em;
-  color: var(--secondary-font-color);
+  color: black;
 }
 
-.footer-accent-text {
-  color: var(--accent-color);
-}
 
 .footer-contact-container {
   display: flex;
@@ -54,30 +36,34 @@
 
 .footer-contact {
   font-style: normal;
+   color: black;
 }
 
 .footer-contact-text {
   display: block;
   margin-bottom: 14px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
+ color: black;
 }
 
 .footer-contact-list {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+ color: black;
 }
 
 .footer-contact-item {
   display: block;
   margin-bottom: 4px;
-  color: var(--secondary-font-color);
+  color: black;
 }
 
 .footer-contact-link {
   transition: color 250ms var(--timing-function);
+   color: black;
 }
 
 .footer-social-media-list {
@@ -86,20 +72,26 @@
 }
 
 .footer-social-media-link {
-  color: var(--secondary-font-color);
+  color: black;
   transition: color 250ms var(--timing-function);
 }
 
 .footer-icon {
   fill: currentColor;
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
+}
+.footer-navigation-list {
+  color: black;
+}
+.fni {
+  color: black;
 }
 
 .footer-navigation-item {
   display: block;
-  color: var(--secondary-font-color);
+  color: black;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -173,7 +165,7 @@
   }
 
   .footer-content {
-    padding-bottom: 58px;
+    padding-bottom: 28px;
     margin-bottom: 24px;
   }
 }

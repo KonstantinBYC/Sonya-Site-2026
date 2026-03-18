@@ -63,44 +63,41 @@
   margin-bottom: 50px;
 }
 
-.second-part__title {
-  color: var(--accent-color);
-}
-
 .our-products__block {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   width: 100%;
   margin-bottom: 20px;
   overflow: hidden;
 }
 .our-products__list {
   height: auto;
+   justify-content: space-between;
 }
 .our-products__item {
   box-sizing: border-box;
-
   background: var(--card-bg-color);
   border: 1px solid var(--bg-color-dots);
   border-radius: 15px;
-  max-width: 335px;
+  min-width: 320px;
   padding: 32px 52px;
 }
 
-@media screen and (min-width: 768px) {
-  .our-products__item {
-    padding: 32px 20px;
-    max-width: 270px;
-  }
+.our-products__image {
+display: inline;
+ justify-content: space-around;
+
 }
+
 
 @media screen and (min-width: 768px) {
   .our-products__item {
-    display: block;
     padding: 32px 20px;
-    width: 270px;
+    max-width: 370px;
+    display: block;   
     margin-right: 24px;
   }
+
   .our-products__image {
     border-radius: 12px;
   }

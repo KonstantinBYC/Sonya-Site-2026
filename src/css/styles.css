@@ -124,7 +124,7 @@ ul {
 a {
   display: block;
   text-decoration: none;
-  color: var(--secondary-font-color);
+  color: black;
 }
 
 button {
