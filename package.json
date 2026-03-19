@@ -15,8 +15,8 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@rolldown/binding-win32-x64-msvc": "^1.0.0-rc.10",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
+
 }
