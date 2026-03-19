@@ -4,14 +4,14 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
-  base: '/Sonya-Site-2026/', 
-  root: 'src',
+  base: './', 
+  root: 'public',
   build: {
     rollupOptions: {
-      input: glob.sync('./src/*.html'),
+      input: glob.sync('./public/*.html'),
     },
     outDir: '../dist',
   },
-  plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+  plugins: [injectHTML(), FullReload(['./public/**/**.html'])],
 });
 
