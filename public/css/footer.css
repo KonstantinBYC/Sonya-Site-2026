@@ -43,13 +43,13 @@
   display: block;
   margin-bottom: 14px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 19px;
   line-height: 1.29;
  color: black;
 }
 
 .footer-contact-list {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.29;
   letter-spacing: -0.02em;
  color: black;
@@ -79,8 +79,8 @@
 .footer-icon {
   fill: currentColor;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
 }
 .footer-navigation-list {
   color: black;
@@ -93,7 +93,7 @@
   display: block;
   color: black;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: -0.02em;
 }

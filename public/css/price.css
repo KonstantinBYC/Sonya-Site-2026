@@ -7,7 +7,7 @@
 }
 
 .unique-components {
-  padding: 72px 0 36px 0;
+  padding: 72px 0px;
 }
 
 .unique-components ::-webkit-scrollbar-thumb {
@@ -28,7 +28,6 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
-
   text-align: center;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -36,10 +35,6 @@
   max-width: 283px;
   margin: 0 auto;
   margin-bottom: 24px;
-}
-
-.unique-components-heading > span {
-  color: var(--accent-color);
 }
 
 .unique-components-desc {
@@ -66,7 +61,7 @@
   max-width: 335px;
   width: 100%;
   height: 330px;
-  margin: 27px auto;
+  margin: 55px auto;
 }
 .components-list-item:nth-child(2n) .component-flip-card-front {
   padding: 27px;
@@ -157,7 +152,7 @@
 .component-flip-card-back-button {
   padding: 5px 15px;
   border-radius: 35px;
-  font-size: 10px;
+  font-size: 15px;
   line-height: 1.2;
   color: var(--secondary-font-color);
   background: var(--accent-color);
@@ -204,6 +199,13 @@
     flex-direction: column;
     align-items: start;
   }
+    .unique-components-heading{
+      font-size: 16px;
+  }
+
+   .component-flip-card-back-description {
+       font-size: 15px;
+     }
 }
 
 @media screen and (min-width: 768px) {
@@ -233,7 +235,7 @@
   }
   .component-flip-card-back-description {
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.29;
 
     letter-spacing: -0.02em;

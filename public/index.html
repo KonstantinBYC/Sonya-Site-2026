@@ -40,6 +40,62 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 
+<style>
+  /* Додаємо бокові відступи до основного контейнера галереї — стрілки не вилазитимуть за край екрану */
+  .lg-outer,
+  .lg-backdrop,
+  .lg-container {
+    padding: 0 40px !important;   /* 40px — комфортний буфер; спробуй 30px або 50px */
+    box-sizing: border-box !important;
+  }
+
+  /* Фіксуємо позицію стрілок — права не йде за правий край */
+  .lg-next {
+    right: 20px !important;       /* 15–30px від правого краю; підбери візуально */
+  }
+
+  .lg-prev {
+    left: 20px !important;
+  }
+
+  /* Робимо стрілки більш видимими/гарними (опціонально) */
+  .lg-next,
+  .lg-prev {
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(0, 0, 0, 0.5) !important;  /* напівпрозорий фон */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 30px !important;   /* розмір стрілки */
+    color: white !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 9999 !important;
+  }
+
+  /* Якщо стрілки все одно обрізаються — дозволяємо їм "виходити" */
+  .lg-outer {
+    overflow: visible !important;
+  }
+
+  /* Адаптивно для мобілки (якщо проблема тільки там) */
+  @media (max-width: 767px) {
+    .lg-outer,
+    .lg-backdrop {
+      padding: 0 25px !important;   /* менший відступ на маленьких екранах */
+    }
+    .lg-next {
+      right: 15px !important;
+    }
+    .lg-prev {
+      left: 15px !important;
+    }
+  }
+</style>
+
+
 </head>
 
 <body>
@@ -98,6 +154,31 @@
       }
     });
   });
+</script>
+
+<script>
+const btn = document.querySelector('.scroll-down-cont');
+const footer = document.querySelector('#footer');
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    btn.classList.toggle('hidden', entry.isIntersecting);
+  },
+  { threshold: 0.1 }   // або 0 — коли футер тільки починає з'являтися
+);
+
+observer.observe(footer);
+
+</script>
+<script>
+  document.querySelectorAll('.link-mobile').forEach(link => {
+  link.addEventListener('click', function() {
+    const modal = this.closest('[data-modal]');
+    if (modal) {
+      setTimeout(() => modalClose(modal), 80);
+    }
+  });
+});
 </script>
 
 </body>

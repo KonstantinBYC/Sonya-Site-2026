@@ -12,6 +12,13 @@
   padding-top: calc(72px / 2);
   padding-bottom: calc(72px / 2);
 }
+.our_products__swiper-pagination {
+  display: flex !important;
+  justify-content: center !important;     /* головний рядок для центрування */
+  align-items: center !important;
+  gap: 5px !important;                   /* відстань між кружечками */
+  margin: 20px auto 0 !important;         /* відступ зверху + центрування */
+ }
 
 @media screen and (min-width: 768px) {
   .section__our-products {
@@ -158,9 +165,12 @@ display: inline;
 }
 
 .section__our-products .swiper-pagination-bullet-active {
-  width: 28px;
+  width: 38px;
   border-radius: 20px;
   background: var(--accent-color);
+  justify-content: center !important;
+  align-items: center !important;
+
 }
 
 

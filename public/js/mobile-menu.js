@@ -20,5 +20,18 @@
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
+ });
+
+  // ←───── ось тут додаємо закриття по кліку на посилання (на тому ж рівні)
+  mobileMenu.querySelectorAll('.link-mobile').forEach(link => {
+    link.addEventListener('click', () => {
+      setTimeout(() => {
+        if (mobileMenu.classList.contains('is-open')) {
+          toggleMenu();
+        }
+      }, 100);           // 100–250 мс, залежно від плавності скролу
+    });
   });
+
 })();
+

@@ -78,6 +78,10 @@
   transition: background-color 250ms var(--timing-function),
     transform 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
+.scroll-down-cont.hidden {
+  opacity: 0;
+  pointer-events: none;   /* щоб не клікалася, коли невидима */
+}
 
 .scroll-down-button:hover,
 .scroll-down-button:focus {
@@ -147,7 +151,15 @@
 
 /*                                               MOBILE                                     */
 @media screen and (min-width: 375px) and (max-width: 767px) {
-  .hero-desc {
+  .hero {
+    position: relative;
+      height: 370vh;
+      overflow: hidden;
+         box-sizing: border-box;
+         padding: 0;
+         }
+         
+         .hero-desc {
     font-size: 20px;
     max-width: 290px;
   }
@@ -171,6 +183,74 @@
     width: 28px;
     height: 28px;
   }
+  .gallery {
+      position: relative;
+      overflow: hidden;
+      min-height: 800px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr;
+
+      grid-auto-rows: minmax(200px, max-content);
+      gap: 1.5vw;
+      padding: 1vw 1vw;
+      box-sizing: border-box;
+    }
+      /* позиціонування конкретних фото */
+    .photo-1 { grid-area: 1 / 1 / 3 / 2; 
+     }          /* великий лівий портрет */
+    .photo-2 { grid-area: 1 / 2 / 2 / 3;  }          /* середній верхній */
+    .photo-3 { grid-area: 2 / 2 / 3 / 3;  }          /* середній нижній */
+    .photo-4 { grid-area: 3 / 1 / 4 / 2;    }          /* великий правий портрет */
+
+    .photo-5 {
+    grid-area: 4 / 1 / 5 / 2; 
+   }
+    .photo-6 {    
+ grid-area: 3 / 2 / 5 / 3; 
+         }
+      .photo-7 {    
+ grid-area: 5 / 1 / 7 / 2; 
+     scale: 100%;
+    }
+         .photo-8 {    
+ grid-area: 5 / 2 / 6 / 3; 
+     scale: 100%;
+    }
+     .photo-9 {    
+ grid-area: 6 / 2 / 7 / 3; 
+     scale: 100%;
+    }
+       .photo-10 {    
+ grid-area: 7 / 1 / 8 / 2; 
+     scale: 100%;
+    }
+    
+.hero-desc {
+  position: absolute;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.21;
+  letter-spacing: 0.01em;
+  color: var(--primary-font-color);
+  display: block;
+  text-align: right;
+right: 3%;
+  max-width: 290px;
+}
+
+.hero-desc-2 {
+    position: absolute;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.21;
+  letter-spacing: -0.01em;
+  color: var(--primary-font-color);
+  display: block;
+  text-align: right;
+  top: 1.1%;
+  right: 4%;
+  max-width: 290px;
+}
 }
 /*                                               tablet                               */
 

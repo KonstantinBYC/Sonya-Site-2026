@@ -99,7 +99,29 @@
     });
   });
 </script>
+<script>
+const btn = document.querySelector('.scroll-down-cont');
+const footer = document.querySelector('#footer');
 
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    btn.classList.toggle('hidden', entry.isIntersecting);
+  },
+  { threshold: 0.1 }   // або 0 — коли футер тільки починає з'являтися
+);
+
+observer.observe(footer);
+</script>
+<script>
+  document.querySelectorAll('.link-mobile').forEach(link => {
+  link.addEventListener('click', function() {
+    const modal = this.closest('[data-modal]');
+    if (modal) {
+      setTimeout(() => modalClose(modal), 80);
+    }
+  });
+});
+</script>
 </body>
 
 </html>
