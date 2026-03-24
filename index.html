@@ -39,8 +39,64 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="./assets/index-wg1eK1aV.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BSZQBV1p.css">
+<style>
+  /* Додаємо бокові відступи до основного контейнера галереї — стрілки не вилазитимуть за край екрану */
+  .lg-outer,
+  .lg-backdrop,
+  .lg-container {
+    padding: 0 40px !important;   /* 40px — комфортний буфер; спробуй 30px або 50px */
+    box-sizing: border-box !important;
+  }
+
+  /* Фіксуємо позицію стрілок — права не йде за правий край */
+  .lg-next {
+    right: 20px !important;       /* 15–30px від правого краю; підбери візуально */
+  }
+
+  .lg-prev {
+    left: 20px !important;
+  }
+
+  /* Робимо стрілки більш видимими/гарними (опціонально) */
+  .lg-next,
+  .lg-prev {
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(0, 0, 0, 0.5) !important;  /* напівпрозорий фон */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 30px !important;   /* розмір стрілки */
+    color: white !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 9999 !important;
+  }
+
+  /* Якщо стрілки все одно обрізаються — дозволяємо їм "виходити" */
+  .lg-outer {
+    overflow: visible !important;
+  }
+
+  /* Адаптивно для мобілки (якщо проблема тільки там) */
+  @media (max-width: 767px) {
+    .lg-outer,
+    .lg-backdrop {
+      padding: 0 25px !important;   /* менший відступ на маленьких екранах */
+    }
+    .lg-next {
+      right: 15px !important;
+    }
+    .lg-prev {
+      left: 15px !important;
+    }
+  }
+</style>
+
+
+  <script type="module" crossorigin src="./assets/index-BuTgAAXa.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cwv6xfvI.css">
 </head>
 
 <body>
@@ -48,7 +104,7 @@
   <header class="header" id="header">
   <div class="container header-nav">
     <nav class="nav">
-      <a href="./index.html" class="nav-link logo"><span>YAROSHENKO SOFIYA</span>
+      <a href="./index.html" class="nav-link logo"><span>YAROSHENKO SOFIIA</span>
         <svg class="icon-logo">
           <use href="./assets/sprite-CAyupqeu.svg#icon-camera"></use>
         </svg>
@@ -98,9 +154,10 @@
     </button>
 
     <ul class="mobile-menu">
-      <li><a href="#about"  class="link-mobile">Über mich</a></li>
-      <li><a href="#gallery" class="link-mobile">Galerie</a></li>
-      <li><a href="#price"  class="link-mobile">Preis</a></li>
+      <li class="mobile-item"><a href="#about" class="link-mobile">Über mich</a></li>
+        <li class="mobile-item"><a href="#price" class="link-mobile">Preis</a></li>
+      <li class="mobile-item"><a href="#gallery" class="link-mobile">Galerie</a></li>
+  
     </ul>
 
     <ul class="menu-list-social">
@@ -199,14 +256,20 @@ Beim Shooting nehme ich mir Zeit, begleite euch aufmerksam und helfe sanft beim 
                 <div class="component-flip-card">
                     <div class="component-flip-card-inner">
                         <div class="component-flip-card-front">
-                            <picture>
-                                <source srcset="./assets/img-1-BKwjoMVn.jpg 1x, /img/hero/img-1.jpg-tab-mob@2x.png 2x" media="(max-width: 1199px)" />
-
-                                <source srcset="./assets/img-1-BKwjoMVn.jpg 1x, ./assets/img-1-BKwjoMVn.jpg 2x" media="(min-width: 1200px)" />
-
-                                <img src="./assets/img-1-BKwjoMVn.jpg" alt="top cameras"
-                                    loading="lazy" />
-                            </picture>
+                    <picture>
+  <source 
+    srcset="/img/hero/img-1-480.jpg 480w, /img/hero/img-1-768.jpg 768w, ./assets/img-1-BKwjoMVn.jpg 1200w" 
+    sizes="(max-width: 767px) 100vw, 
+           (max-width: 1199px) 50vw, 
+           33vw" 
+  />
+  <img 
+    src="./assets/img-1-BKwjoMVn.jpg" 
+    srcset="/img/hero/img-1@2x.jpg 2x" 
+    alt="studio" 
+    loading="eager"  
+    width="600" height="800"   />
+</picture>
                             <p>Personal / Event</p>
                         </div>
 
@@ -243,15 +306,25 @@ Durchschnittlicher Studio­preis: 100 € / Stunde
                 <div class="component-flip-card">
                     <div class="component-flip-card-inner">
                         <div class="component-flip-card-front">
-                            <picture>
-                                <source srcset="./assets/ingredients3-tab-mob-0bo_YQX4.png 1x, ./assets/ingredients3-tab-mob-0bo_YQX4.png 2x" media="(max-width: 1199px)" />
-
-                                <source srcset="./assets/img-4-CWnq-Ejj.jpg 1x, ./assets/ingredients3-tab-mob-0bo_YQX4.png 2x" media="(min-width: 1200px)" />
-
-                                <img src="./assets/ingredients3-tab-mob-0bo_YQX4.png" alt="studio" loading="lazy" />
-                            </picture>
+<picture>
+  <source 
+    srcset="/img/hero/img-4-480.jpg 480w, /img/hero/img-4-768.jpg 768w, ./assets/img-4-CWnq-Ejj.jpg 1200w" 
+    sizes="(max-width: 767px) 100vw, 
+           (max-width: 1199px) 50vw, 
+           33vw" 
+  />
+  <img 
+    src="./assets/img-4-CWnq-Ejj.jpg" 
+    srcset="/img/hero/img-4@2x.jpg 2x" 
+    alt="studio" 
+    loading="eager" 
+    width="600" height="800"  />
+</picture>
                             <p>Hochzeiten</p>
                         </div>
+
+
+
                         <div class="component-flip-card-back">
                             <p class="component-flip-card-back-heading">Hochzeiten</p>
                             <div class="component-flip-card-back-buttons">
@@ -274,14 +347,20 @@ Lieferung innerhalb von 10 Tagen </p>
                 <div class="component-flip-card">
                     <div class="component-flip-card-inner">
                         <div class="component-flip-card-front">
-                            <picture>
-                                <source srcset="./assets/ingredients4-tab-mob@2x-DtAzFZf_.png 1x, ./assets/ingredients4-tab-mob@2x-DtAzFZf_.png 2x" media="(max-width: 1199px)" />
-
-                                <source srcset="./assets/img-5-DoCUCnoM.jpg 1x, ./assets/ingredients4-tab-mob@2x-DtAzFZf_.png 2x" media="(min-width: 1200px)" />
-
-                                <img src="./assets/ingredients4-tab-mob@2x-DtAzFZf_.png" alt="software"
-                                    loading="lazy" />
-                            </picture>
+                          <picture>
+  <source 
+    srcset="/img/hero/img-5-480.jpg 480w, /img/hero/img-5-768.jpg 768w, ./assets/img-5-DoCUCnoM.jpg 1200w" 
+    sizes="(max-width: 767px) 100vw, 
+           (max-width: 1199px) 50vw, 
+           33vw" 
+  />
+  <img 
+    src="./assets/img-5-DoCUCnoM.jpg" 
+    srcset="/img/hero/img-5@2x.jpg 2x" 
+    alt="studio" 
+    loading="eager" 
+    width="600" height="800" />
+</picture>
                             <p>Hochzeitspaket</p>
                         </div>
                         <div class="component-flip-card-back">
@@ -458,6 +537,7 @@ Lieferung innerhalb von 10 Tagen</p>
             </li>
                     </ul>
     </div>
+    
 </footer>
 
 
@@ -506,6 +586,31 @@ Lieferung innerhalb von 10 Tagen</p>
       }
     });
   });
+</script>
+
+<script>
+const btn = document.querySelector('.scroll-down-cont');
+const footer = document.querySelector('#footer');
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    btn.classList.toggle('hidden', entry.isIntersecting);
+  },
+  { threshold: 0.1 }   // або 0 — коли футер тільки починає з'являтися
+);
+
+observer.observe(footer);
+
+</script>
+<script>
+  document.querySelectorAll('.link-mobile').forEach(link => {
+  link.addEventListener('click', function() {
+    const modal = this.closest('[data-modal]');
+    if (modal) {
+      setTimeout(() => modalClose(modal), 80);
+    }
+  });
+});
 </script>
 
 </body>
