@@ -1,11 +1,14 @@
 .advantages-container {
   max-width: 375px;
+
 }
 
 .adv-wrap {
-  background-color: grey;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: #ffffff;        /* білий фон */
+  border: 1px solid #bdbaba;  
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 }
 .adv-list {
   display: flex;
@@ -18,82 +21,144 @@
   align-items: center;
   width: 132px;
   height: 62px;
-
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 365px;
+  border: 1px solid rgb(143, 140, 140);
+  border-radius: 55px;
   margin-bottom: 22px;
 }
 .adv-icon {
-  fill: white;
+  fill: black;
 }
 .adv-hdr {
   margin-bottom: 18px;
   max-width: 173px;
   height: 22px;
-
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  color: var(--secondary-font-color);
+  color: black;
 }
 .advantages-text {
   font-style: normal;
   font-weight: 500;
-  text-align: justify;
   font-size: 17px;
+  text-align: justify;
   line-height: 1.2;
   letter-spacing: -0.02em;
-
-  color: var(--advantages-font-color);
+  color: black;
 }
+.photo-uber {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
+
+
 
 /* Tablet */
-@media screen and (min-width: 768px) {
-  .advantages-container {
-    max-width: 734px;
-  }
-  .adv-wrap {
-    padding-bottom: 85px;
-    padding-top: 50px;
-  }
-  .adv-list {
-    flex-direction: row;
-    row-gap: 32px;
-    column-gap: 60px;
-    flex-wrap: wrap;
-  }
-  .advantages-text {
-    width: 308px;
-  }
-}
-/* Desktop */
-@media screen and (min-width: 1200px) {
-  .advantages-container {
-    max-width: 1130px;
-    width: 800px;
-  }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+   .advantages-container {
+    max-width: 728px;
+      }
   .adv-wrap {
     padding-bottom: 50px;
     margin-bottom: 0px;
+    
   }
   .adv-list {
-    gap: 288px;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
     justify-content: center;
-  }
+    flex-wrap: nowrap;
+     }
   .adv-list-item {
-    max-width: 330px;
+    padding-top: 20px;
+    max-width: 430px;
     position: relative;
   }
+  .photo-uber {
+    max-width: 370px;
+     }
   .adv-list-item:not(:last-of-type)::after {
     content:'';
     display: inline-block;
     width: 44px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
     transform: rotate(90deg);
     position: absolute;
-    top: 272px;
-    left: 430px;
+    top: 350px;
+    left: 435px;
+  }
+  .advantages-text {
+  font-style: normal;
+  font-weight: 400;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: black;
+}
+}
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .advantages-container {
+    max-width: 1200px;
+    width: 800px;
+   max-height: 770px;
+  }
+  .adv-wrap {
+   margin: 0px;
+   }
+  
+   .adv-list {
+   display: flex;
+    flex-direction: row;
+    gap: 80px;
+    justify-content: center;
+    align-items: flex-start;  
+    flex-wrap: nowrap;
+  }
+  .adv-list-item {
+    max-width: 520px;
+    position: relative;
+    flex: 1; 
+  }
+  .photo-uber {
+ margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adv-hdr {
+  margin-bottom: 18px;
+  max-width: 173px;
+  height: 22px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  color: black;
+}
+.advantages-text {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 2.1;
+  letter-spacing: -0.02em;
+  color: black;
+}
+  .adv-list-item:not(:last-of-type)::after {
+    content:'';
+    display: block;
+    width: 1px;
+    border: 1px solid rgb(112, 110, 110);
+    height: 390px;                /* ЗРОБИЛИ ВИСОТУ БІЛЬШЕ */
+    background-color: #000000;    /* чисто чорний колір */
+    position: absolute;
+    top: 50%;                     /* центрування по вертикалі */
+    transform: translateY(-50%);  /* точне центрування */
+    left: calc(100% + 40px);      /* розміщення праворуч від тексту */
   }
 }

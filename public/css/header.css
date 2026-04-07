@@ -6,7 +6,7 @@
 */
 .header {
   padding-top: 24px;
-  padding-bottom: 34px;
+  padding-bottom: 24px;
   margin: 0px;
   background-color: var(--primary-bg-color);
   /* overflow-x: hidden; */
@@ -22,12 +22,11 @@
 }
 
 @media screen and (max-width: 767px) {
-  .container {
+.container {
     max-width: 375px;
     padding: 0px 20px;
     margin: 0 auto;
-  }
-
+}
 .link-mobile {
   font-size: 22px;
   color: orange;
@@ -36,7 +35,6 @@
   letter-spacing: -0.00em;
   padding: 0px;
 }
-
   .nav-link {
     font-family: 'Belanosima', sans-serif;
     font-weight: 500;
@@ -115,17 +113,21 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 1160px;
+    min-width: 1000px;
+  }
   .nav-list,
   .nav-list-social {
     display: none;
   }
   .mobile-menu-open_icon {
-    width: 32px;
-    height: 32px;
+    width: 47px;
+    height: 47px;
   }
   .icon-social.white {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     fill: #ffffff;
   }
   .nav {
@@ -148,10 +150,11 @@
   }
   .nav-link.logo {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2857;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.00em;
     color: var(--primary-font-color);
+    padding: 0px;
   }
   .italic-logo {
     font-style: italic;
@@ -162,8 +165,8 @@
     margin-left: 4px;
   }
   .mobile-menu-open {
-    height: 28px;
-    width: 28px;
+    height: 35px;
+    width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,10 +197,10 @@
     color: var(--primary-font-color);
   }
   .nav-link.logo {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.2857;
-    letter-spacing: -0.03em;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
     align-items: center;
     color: var(--primary-font-color);
   }
@@ -205,9 +208,10 @@
     font-style: italic;
   }
   .icon-logo {
-    width: 21px;
-    height: 21px;
-    margin-left: 4px;
+    width: 32px;
+    height: 32px;
+    margin-left: 6px;
+    margin-bottom: 5px;
   }
   .mobile-menu-open {
     min-height: 28px;
@@ -224,7 +228,6 @@
     outline: none;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .container {
     min-width: 1200px;
@@ -361,7 +364,7 @@ font-family: 'Belanosima', sans-serif;
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .menu-container {
-    min-width: 290px;
+    min-width: 390px;
   }
 
   .mobile-menu-container {

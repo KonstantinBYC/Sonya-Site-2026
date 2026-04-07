@@ -108,9 +108,9 @@
   color: var(--secondary-font-color);
   background: silver;
 }
-.component-flip-card-front > picture {
-  margin: 0 auto 25px;
-  max-width: 224px;
+.component-flip-card-front > img {
+  margin: 10px auto 25px;
+  max-width: 250px;
 }
 
 .component-flip-card-front > p {
@@ -118,6 +118,7 @@
   line-height: 1.28;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  align-self: center;
 }
 
 /* Style the back side */
@@ -237,12 +238,9 @@
     font-family: 'Montserrat';
     font-size: 15px;
     line-height: 1.29;
-
     letter-spacing: -0.02em;
-
     color: #111111;
     text-align: left;
-
     overflow-y: auto;
   }
 
@@ -263,7 +261,7 @@
 
 @media screen and (min-width: 768px) {
   .unique-components {
-    padding: 100px 0 50px 0;
+    padding: 50px 0 70px 0;
   }
   .unique-components-heading {
     font-size: 24px;
@@ -277,14 +275,13 @@
   .components-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 111px;
     align-items: center;
-    margin: 0px auto;
-    width: 704px;
+    margin: 10px auto;
   }
 
   .components-list-item {
-    margin: 27px auto;
+    margin: 30px auto;
   }
 
   .components-list-item:nth-child(1) {
@@ -296,7 +293,6 @@
   .components-list-item:nth-child(3) {
     order: 3;
   }
-
   .components-list-item:nth-child(4) {
     order: 4;
   }
@@ -337,7 +333,8 @@
   }
   .component-flip-card-front > picture {
     width: 206px;
-    margin-bottom: 36px;
+    margin-bottom: 0px;
+    text-align: center;
   }
   .components-list {
     width: 100%;
