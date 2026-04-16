@@ -46,6 +46,7 @@
 }
 html {
   scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -157,3 +158,57 @@ img {
 }
 
 
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;           /* блокує горизонтальний скрол */
+    width: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;       /* дуже важливо! */
+}
+html {
+    scrollbar-gutter: stable;
+}
+
+/* Додатково для кращої сумісності (особливо в Chrome/Firefox) */
+html, body {
+    overflow-y: scroll;          /* завжди показуємо скролбар, навіть якщо сторінка коротка */
+}
+
+/* Коли галерея відкрита — блокуємо скрол, але місце під скролбар залишається */
+.sl-overlay ~ body,
+body.simple-lightbox-open {      /* SimpleLightbox часто додає клас на body */
+    overflow-y: hidden;
+    padding-right: 0;            /* на всяк випадок */
+}
+
+
+
+/* Глобальний захист від горизонтального скролу */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Правильна робота зі скролом при відкритті/закритті lightbox */
+body.sl-open,
+body.has-lightbox,
+body.simple-lightbox-open {
+    overflow-y: hidden !important;
+}
+
+/* Повернення нормального скролу після закриття */
+body:not(.sl-open):not(.has-lightbox):not(.simple-lightbox-open) {
+    overflow-y: auto !important;
+    padding-right: 0 !important;
+}
+
+/* Додатковий захист (на випадок, якщо lightbox лишає inline-стилі) */
+.sl-overlay ~ body,
+html[style*="overflow"] {
+    overflow-y: auto !important;
+}

@@ -1,11 +1,10 @@
 .advantages-container {
   max-width: 375px;
-
 }
 
 .adv-wrap {
   background-color: #ffffff;        /* білий фон */
-  border: 1px solid #bdbaba;  
+  border: 1px solid #cac4c4;  
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -65,40 +64,56 @@
     margin-bottom: 0px;
     
   }
-  .adv-list {
-    display: flex;
+   .adv-list {
+   display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 80px;
     justify-content: center;
+    align-items: flex-start;  
     flex-wrap: nowrap;
-     }
+  }
   .adv-list-item {
-    padding-top: 20px;
-    max-width: 430px;
+    max-width: 520px;
     position: relative;
+    flex: 1; 
   }
   .photo-uber {
-    max-width: 370px;
-     }
-  .adv-list-item:not(:last-of-type)::after {
-    content:'';
-    display: inline-block;
-    width: 44px;
-    border: 1px solid black;
-    transform: rotate(90deg);
-    position: absolute;
-    top: 350px;
-    left: 435px;
-  }
-  .advantages-text {
+ margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adv-hdr {
+  margin-bottom: 18px;
+  max-width: 173px;
+  height: 22px;
   font-style: normal;
   font-weight: 400;
-  text-align: justify;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-size: 24px;
+  line-height: 1.2;
   color: black;
 }
+.advantages-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: justify;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: black;
+}
+  .adv-list-item:not(:last-of-type)::after {
+    content:'';
+    display: block;
+    width: 1px;
+    border: 1px solid rgb(112, 110, 110);
+    height: 390px;                /* ЗРОБИЛИ ВИСОТУ БІЛЬШЕ */
+    background-color: #000000;    /* чисто чорний колір */
+    position: absolute;
+    top: 50%;                     /* центрування по вертикалі */
+    transform: translateY(-50%);  /* точне центрування */
+    left: calc(100% + 40px);      /* розміщення праворуч від тексту */
+  }
 }
 /* Desktop */
 @media screen and (min-width: 1200px) {
@@ -161,4 +176,20 @@
     transform: translateY(-50%);  /* точне центрування */
     left: calc(100% + 40px);      /* розміщення праворуч від тексту */
   }
+}
+/* Mobile */
+@media screen and (man-width: 767px) {
+    .adv-list {
+   display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;  
+    flex-wrap: nowrap;
+  }
+.photo-uber {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
 }

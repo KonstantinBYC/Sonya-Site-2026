@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
  
   <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
   <title>Yaroshenko Art</title>
 
   
@@ -41,58 +41,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Додаємо бокові відступи до основного контейнера галереї — стрілки не вилазитимуть за край екрану */
-  .lg-outer,
-  .lg-backdrop,
-  .lg-container {
-    padding: 0 40px !important;   /* 40px — комфортний буфер; спробуй 30px або 50px */
+
+/* Контейнери SimpleLightbox */
+.sl-overlay,
+.sl-wrapper,
+.sl-outer,
+.sl-inner {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
-  }
+    padding: 0 !important;           /* прибираємо зайві відступи */
+}
 
-  /* Фіксуємо позицію стрілок — права не йде за правий край */
-  .lg-next {
-    right: 20px !important;       /* 15–30px від правого краю; підбери візуально */
-  }
-
-  .lg-prev {
-    left: 20px !important;
-  }
-
-  /* Робимо стрілки більш видимими/гарними (опціонально) */
-  .lg-next,
-  .lg-prev {
+/* Стрілки (навігація) */
+.sl-navigation .sl-prev,
+.sl-navigation .sl-next {
     width: 50px !important;
     height: 50px !important;
-    background: rgba(0, 0, 0, 0.5) !important;  /* напівпрозорий фон */
+    background: rgba(185, 182, 182, 0.6) !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 30px !important;   /* розмір стрілки */
-    color: white !important;
+    font-size: 28px !important;
+    color: #000000 !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     z-index: 9999 !important;
-  }
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
 
-  /* Якщо стрілки все одно обрізаються — дозволяємо їм "виходити" */
-  .lg-outer {
-    overflow: visible !important;
-  }
+/* Позиціонування стрілок */
+.sl-navigation .sl-prev {
+    left: 12px !important;
+}
 
-  /* Адаптивно для мобілки (якщо проблема тільки там) */
-  @media (max-width: 767px) {
-    .lg-outer,
-    .lg-backdrop {
-      padding: 0 25px !important;   /* менший відступ на маленьких екранах */
+.sl-navigation .sl-next {
+    right: 12px !important;
+}
+
+/* Адаптив для мобільних екранів */
+@media (max-width: 767px) {
+    .sl-navigation .sl-prev,
+    .sl-navigation .sl-next {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 24px !important;
     }
-    .lg-next {
-      right: 15px !important;
-    }
-    .lg-prev {
-      left: 15px !important;
-    }
-  }
+
+    .sl-navigation .sl-prev  { left: 8px !important; }
+    .sl-navigation .sl-next  { right: 8px !important; }
+}
 </style>
 
 

@@ -31,23 +31,6 @@
     padding-top: calc(128px / 2);
   }
 }
-
-.container.our-products__container {
-  box-sizing: border-box;
-  /* min-width: calc(335px + (20px * 2)); */
-  height: auto;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  overflow: hidden;
-}
-
 @media screen and (min-width: 768px) {
   .container.our-products__container {
     max-width: calc(704px + (20px * 2));
@@ -69,7 +52,21 @@
   color: var(--primary-font-color);
   margin-bottom: 50px;
 }
+.container.our-products__container {
+  box-sizing: border-box;
+  /* min-width: calc(335px + (20px * 2)); */
+  height: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  overflow: hidden;
+}
 .our-products__block {
   display: flex;
   justify-content: space-around;
@@ -89,13 +86,11 @@
   min-width: 320px;
   padding: 32px 52px;
 }
-
 .our-products__image {
 display: inline;
  justify-content: space-around;
 
 }
-
 
 @media screen and (min-width: 768px) {
   .our-products__item {
@@ -109,30 +104,24 @@ display: inline;
     border-radius: 12px;
   }
 }
-
 .our-products__name {
   font-weight: 600;
   font-size: 18px;
   padding: 6px 2px;
   line-height: calc(24 / 18);
-
   letter-spacing: -0.02em;
   text-transform: uppercase;
-
   color: var(--primary-font-color);
   margin-bottom: 2px;
 }
-
 .our-products__type {
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: -0.02em;
-
   color: rgb(152, 151, 151);
   margin-bottom: 18px;
 }
-
 .our-products__price {
   font-weight: 500;
   font-size: 14px;
@@ -151,7 +140,6 @@ display: inline;
   color: var(--primary-font-color);
 }
 /* Styles Slider */
-
 .our-products__block .swiper-wrapper {
   box-sizing: content-box;
 }
@@ -163,17 +151,13 @@ display: inline;
   height: 13px;
   background: rgba(17, 17, 17, 0.5);
 }
-
 .section__our-products .swiper-pagination-bullet-active {
   width: 38px;
   border-radius: 20px;
   background: var(--accent-color);
   justify-content: center !important;
   align-items: center !important;
-
 }
-
-
 .item_gallery img {
   width: 100%;
   height: auto;
@@ -182,7 +166,6 @@ display: inline;
   cursor: pointer;
   transition: transform 0.5s;
 }
-
 .item_gallery img:hover {
   transform: scale(1.04);
 }

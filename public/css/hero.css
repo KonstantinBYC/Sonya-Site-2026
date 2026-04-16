@@ -1,37 +1,11 @@
 .hero {
     position: relative;
-      height: 300vh;
-      overflow: hidden;
-         box-sizing: border-box;
-         padding: 0;
-         
-         }
-         
-.hero-desc {
-  position: absolute;
- 
-  font-size: 28px;
-  line-height: 1.21;
-  letter-spacing: -0.03em;
-  color: var(--primary-font-color);
-  display: block;
-  text-align: right;
-  margin-bottom: -515px;
-  max-width: 290px;
-}
+    height: 300vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    }
 
-.hero-desc-2 {
-  position: absolute;
-  font-size: 18px;
-  line-height: 1.21;
-  letter-spacing: -0.03em;
-  color: var(--primary-font-color);
-  display: block;
-  text-align: right;
-  margin-bottom: -15px;
-  max-width: 290px;
-}
-  
 .button-hero-cont {
   display: flex;
   justify-content: space-between;
@@ -82,7 +56,6 @@
   opacity: 0;
   pointer-events: none;   /* щоб не клікалася, коли невидима */
 }
-
 .scroll-down-button:hover,
 .scroll-down-button:focus {
   background-color: var(--accent-color);
@@ -90,10 +63,310 @@
   transform: rotate(-90deg);
 }
 
+    
+/*                                   MOBILE                                      */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .hero {
+    position: relative;
+     max-height: 5000px;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 0px;
+      margin-bottom: 70px;
+         }
+         
+  .hero-desc {
+  position: absolute;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.21;
+  letter-spacing: 0.01em;
+  color: var(--primary-font-color);
+  display: block;
+  text-align: right;
+  top: 1%;
+  right: 3%;
+  max-width: 290px;
+}
+
+.hero-desc-2 {
+    position: absolute;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.21;
+  letter-spacing: -0.01em;
+  color: var(--primary-font-color);
+  display: block;
+  text-align: right;
+  top: 1.88%;
+  right: 3.6%;
+  max-width: 290px;
+}
+
+  .button-hero-cont {
+    justify-content: flex-start;
+    gap: 32px 14px;
+    flex-wrap: wrap;
+  }
+  .hero-buttons {
+    gap: 12px;
+  }
+  .icon-scroll-down {
+    width: 16px;
+    height: 160px;
+  }
+  .scroll-down {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .scroll-down-button {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .gallery {
+      position: relative;
+      height: 100dvh;
+      min-height: -webkit-fill-available;
+      height: -webkit-fill-available;
+      overflow: hidden;
+      min-height: 1800px;
+      display: grid;
+      grid-template-columns: 1.2fr 1.0fr;
+      grid-template-rows: repeat(2, 250px 300px 270px 270px);
+      grid-auto-rows: 140px;   
+      align-content: start;    
+      align-items: start;        
+      gap: 7px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+      .photo {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      transition: transform 0.4s ease;
+      background: #111;     
+    }
+    .photo:hover {
+      transform: scale(1.01);
+      z-index: 10;
+    }
+
+    /* позиціонування конкретних фото */
+    .photo-1 { grid-area: 1 / 1 / 3 / 2; 
+       scale: 100%;  }          
+    .photo-2 { grid-area: 1 / 2 / 2 / 3;
+     scale: 100%;  }         
+    .photo-3 { grid-area: 2 / 2 / 3 / 3;}     
+
+    .photo-4 { grid-area: 3 / 1 / 4 / 2;}          
+    .photo-5 { grid-area: 4 / 1 / 5 / 2;}
+    .photo-6 { grid-area: 3 / 2 / 5 / 3;}
+    
+    .photo-7 { grid-area: 5 / 1 / 7 / 2; 
+     scale: 100%;
+    }
+    .photo-8 {  grid-area: 5 / 2 / 6 / 3; 
+     scale: 100%;
+    }  
+   .photo-9  {   grid-area: 6 / 2 / 7 / 3; 
+  aspect-ratio: 4 / 5;}  
+
+  .photo-10 { grid-area: 7 / 1 / 8 / 2; 
+    aspect-ratio: 4 / 5;   } 
+  .photo-11 { grid-area: 8 / 1 / 9 / 2; }  
+  .photo-12 { grid-area: 7 / 2 / 9 / 3; 
+    aspect-ratio: 4 / 5;  } 
+    
+  .photo-13 {    grid-area: 9 / 1 / 11 / 2; 
+     scale: 100%;}
+  .photo-14 {    grid-area: 9 / 2 / 10 / 3; 
+     scale: 100%;}
+  .photo-15 {   grid-area: 10 / 2 / 11 / 3; 
+     scale: 100%;}
+
+  .photo-16 { grid-area: 11 / 1 / 13 / 3; 
+     scale: 100%;
+    }
+}
+
+
+/*                                   TABLET                                      */
+@media screen and (min-width: 768px) and (max-width: 1199px) {    
+ .hero {
+    position: relative;
+      height: 350vh;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 0;
+      }
+  .hero-desc {
+    font-size: 20px;
+    max-width: 290px;
+  }
+ .icon-scroll-down {
+    width: 20px;
+    height: 160px;
+  }
+  .scroll-down {
+    font-size: 14px;
+    line-height: 1.17;
+  }
+  .scroll-down-button {
+    width: 30px;
+    height: 30px;
+  }
+.gallery {
+    position: relative;
+    height: auto !important;
+    min-height: 100dvh;                      /* мінімум на весь екран */
+    max-height: none;
+    display: grid;
+    grid-template-columns: 1.9fr 1.2fr;
+        /* Найважливіше для останнього фото */
+    grid-auto-rows: minmax(300px, 380px);     /* рядки ростуть під фото */
+    gap: 10px;
+    padding: 10px 10px 80px 10px;            /* 10px зверху + 48px потрібний марджін + запас 22px */
+    box-sizing: border-box;
+ 
+    align-content: start;
+    align-items: start;
+    overflow: visible !important;            /* обов'язково */
+}
+.gallery a {
+    display: block;
+    height: 100%;
+    overflow: hidden;               /* обрізаємо тільки всередині клітинки */
+    border-radius: 4px;             /* якщо хочеш закруглення */
+}
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;              /* або object-fit: contain — спробуй обидва */
+    display: block;
+}
+ 
+.photo {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      transition: transform 0.4s ease;
+      background: #111;     
+    }
+    .photo:hover {
+      transform: scale(1.01);
+      z-index: 10;
+    }
+       
+    /* позиціонування конкретних фото */
+  .photo-1 { grid-area: 1 / 1 / 3 / 2; 
+       scale: 100%;  }          
+  .photo-2 { grid-area: 1 / 2 / 2 / 3;
+     scale: 100%;  }         
+  .photo-3 { grid-area: 2 / 2 / 3 / 3;}     
+  .photo-4 { grid-area: 3 / 1 / 4 / 2;}          
+  .photo-5 { grid-area: 4 / 1 / 5 / 2;}
+  .photo-6 { grid-area: 3 / 2 / 5 / 3;}
+  .photo-7 { grid-area: 5 / 1 / 7 / 2; 
+     scale: 100%;
+    }
+    .photo-8 {  grid-area: 5 / 2 / 6 / 3; 
+     scale: 100%;
+    }  
+   .photo-9  {   grid-area: 6 / 2 / 7 / 3; 
+  aspect-ratio: 4 / 5;}  
+
+  .photo-10 { grid-area: 7 / 1 / 8 / 2; 
+    aspect-ratio: 4 / 5;   } 
+  .photo-11 { grid-area: 8 / 1 / 9 / 2; }  
+  .photo-12 { grid-area: 7 / 2 / 9 / 3; 
+    aspect-ratio: 4 / 5;  } 
+    
+  .photo-13 {    grid-area: 9 / 1 / 11 / 2; 
+     scale: 100%;}
+  .photo-14 {    grid-area: 9 / 2 / 10 / 3; 
+     scale: 100%;}
+  .photo-15 {   grid-area: 10 / 2 / 11 / 3; 
+     scale: 100%;}
+
+  .photo-16 { grid-area: 11 / 1 / 13 / 3; 
+     scale: 100%;
+    }
+    
+.hero-desc {
+  position: absolute;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.21;
+  letter-spacing: 0.01em;
+  color: var(--primary-font-color);
+  display: block;
+  text-align: right;
+  top: 0.2%;
+  right: 3%;
+  max-width: 290px;
+}
+
+.hero-desc-2 {
+    position: absolute;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.21;
+  letter-spacing: -0.01em;
+  color: var(--primary-font-color);
+  display: block;
+  text-align: right;
+  top: 1.4%;
+  right: 3.5%;
+  max-width: 290px;
+}
+}
+/*                                  DESKTOP                                     */
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1920px;
+    margin: 0px auto;
+    position: relative;
+      height: auto;
+      min-height: auto;
+      overflow: hidden;
+      display: grid;
+      padding-top: 0px;
+        margin-bottom: 150px;
+  }
+  .hero-desc {
+    position: absolute;
+    font-weight: 300;
+    font-size: 70px;
+    line-height: 1.63;
+    letter-spacing: -0.02em;
+    font-style: inherit;
+    max-width: 480px;
+    text-align: right;
+    right: 4vw;
+    top: 2vh;
+   z-index: 30;
+  }
+  .hero-desc-2 {
+     position: absolute;
+  font-weight: 100;
+  font-size: 33px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--primary-font-color);
+  right: 4vw;
+  top: 9.8vh;
+  max-width: 408px;
+   z-index: 30;
+}
 
 .gallery {
       position: relative;
-      height: 100dvh;
+      height: 700dvh;
       min-height: -webkit-fill-available;
       height: -webkit-fill-available;
       overflow: hidden;
@@ -170,274 +443,9 @@
  grid-area: 7 / 3 / 9 / 4; 
      scale: 100%;
     }
-/*                                               MOBILE                                     */
-@media screen and (min-width: 375px) and (max-width: 767px) {
-  .hero {
-    position: relative;
-      height: 370vh;
-      overflow: hidden;
-         box-sizing: border-box;
-         padding: 0;
-         }
-         
-  .hero-desc {
-    font-size: 20px;
-    max-width: 290px;
-  }
-  .button-hero-cont {
-    justify-content: flex-start;
-    gap: 32px 14px;
-    flex-wrap: wrap;
-  }
-  .hero-buttons {
-    gap: 12px;
-  }
-  .icon-scroll-down {
-    width: 16px;
-    height: 160px;
-  }
-  .scroll-down {
-    font-size: 12px;
-    line-height: 1.17;
-  }
-  .scroll-down-button {
-    width: 28px;
-    height: 28px;
-  }
-  .gallery {
-      position: relative;
-      overflow: hidden;
-      min-height: 800px;
-      display: grid;
-      grid-template-columns: 1.3fr 0.8fr;
 
-       grid-auto-rows: 380px;      
-      gap: 1.5vw;
-      padding: 1vw 1vw;
-      box-sizing: border-box;
-    }
-      /* позиціонування конкретних фото */
-    .photo-1 { grid-area: 1 / 1 / 3 / 2; 
-     }          /* великий лівий портрет */
-    .photo-2 { grid-area: 1 / 2 / 2 / 3;  }          /* середній верхній */
-    .photo-3 { grid-area: 2 / 2 / 3 / 3;  }          /* середній нижній */
-    .photo-4 { grid-area: 3 / 1 / 4 / 2;    }          /* великий правий портрет */
-
-    .photo-5 {
-    grid-area: 4 / 1 / 5 / 2; 
-   }
-    .photo-6 {    
- grid-area: 3 / 2 / 5 / 3; 
-         }
-      .photo-7 {    
- grid-area: 5 / 1 / 7 / 2; 
-     scale: 100%;
-    }
-         .photo-8 {    
- grid-area: 5 / 2 / 6 / 3; 
-     scale: 100%;
-    }
-     .photo-9 {    
- grid-area: 6 / 2 / 7 / 3; 
-     scale: 100%;
-    }
-       .photo-10 {    
- grid-area: 7 / 1 / 8 / 2; 
-     scale: 100%;
-    }
-    
-.hero-desc {
-  position: absolute;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 1.21;
-  letter-spacing: 0.01em;
-  color: var(--primary-font-color);
-  display: block;
-  text-align: right;
-right: 3%;
-  max-width: 290px;
 }
-
-.hero-desc-2 {
-    position: absolute;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.21;
-  letter-spacing: -0.01em;
-  color: var(--primary-font-color);
-  display: block;
-  text-align: right;
-  top: 1.1%;
-  right: 4%;
-  max-width: 290px;
-}
-}
-/*                                               TABLET                               */
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
- .hero {
-    position: relative;
-      height: 350vh;
-      overflow: hidden;
-      box-sizing: border-box;
-      padding: 0;
-      }
-         
-  .hero-desc {
-    font-size: 20px;
-    max-width: 290px;
-  }
-
-  .icon-scroll-down {
-    width: 20px;
-    height: 160px;
-  }
-  .scroll-down {
-    font-size: 14px;
-    line-height: 1.17;
-  }
-  .scroll-down-button {
-    width: 30px;
-    height: 30px;
-  }
-  .gallery {
-      position: relative;
-      overflow: hidden;
-      min-height: 800px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-  grid-template-rows: 74vw;
-      grid-auto-rows: 380px;      
-      gap: 1.5vw;
-      padding: 1vw 1vw;
-      box-sizing: border-box;
-    }
-      /* позиціонування конкретних фото */
-    .photo-1 { grid-area: 1 / 1 / 3 / 2; 
-     
-     }          /* великий лівий портрет */
-    .photo-2 { grid-area: 1 / 2 / 2 / 3;  }          /* середній верхній */
-    .photo-3 { grid-area: 2 / 2 / 3 / 3;  }          /* середній нижній */
-    .photo-4 { grid-area: 3 / 1 / 4 / 2;    }          /* великий правий портрет */
-
-    .photo-5 {
-    grid-area: 4 / 1 / 5 / 2; 
-   }
-    .photo-6 {    
- grid-area: 3 / 2 / 5 / 3; 
-         }
-      .photo-7 {    
- grid-area: 5 / 1 / 7 / 2; 
-     scale: 100%;
-    }
-      .photo-8 {    
- grid-area: 5 / 2 / 6 / 3; 
-     scale: 100%;
-    }
-     .photo-9 {    
- grid-area: 6 / 2 / 7 / 3; 
-     scale: 100%;
-    }
-       .photo-10 {    
- grid-area: 7 / 1 / 8 / 2; 
-     scale: 100%;
-    }
-      .photo-11 {    
- grid-area: 8 / 1 / 9 / 2; 
-     scale: 100%;
-    }
-      .photo-12 {    
- grid-area: 7 / 2 / 9 / 3; 
-     scale: 100%;
-    }
-        .photo-13 {    
- grid-area: 9 / 1 / 11 / 2; 
-     scale: 100%;
-    }
-            .photo-14 {    
- grid-area: 9 / 2 / 10 / 3; 
-     scale: 100%;
-    }
-            .photo-15 {    
- grid-area: 10 / 2 / 11 / 3; 
-     scale: 100%;
-    }
-            .photo-16 {    
- grid-area: 11 / 1 / 13 / 3; 
-     scale: 100%;
-    }
-.hero-desc {
-  position: absolute;
-  font-weight: 300;
-  font-size: 60px;
-  line-height: 1.21;
-  letter-spacing: 0.01em;
-  color: var(--primary-font-color);
-  display: block;
-  text-align: right;
-  top: 0.2%;
-  right: 3%;
-  max-width: 290px;
-}
-
-.hero-desc-2 {
-    position: absolute;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 1.21;
-  letter-spacing: -0.01em;
-  color: var(--primary-font-color);
-  display: block;
-  text-align: right;
-  top: 1.4%;
-  right: 3.5%;
-  max-width: 290px;
-}
-}
-
-
-/*                                   DESKTOP                                      */
-@media screen and (min-width: 1200px) {
-  .hero {
-    max-width: 1920px;
-    margin: 0px auto;
-    position: relative;
-      height: auto;
-      min-height: auto;
-      overflow: hidden;
-      display: grid;
-      padding-top: 0px;
-        margin-bottom: 150px;
-  }
-  .hero-desc {
-    position: absolute;
-    font-weight: 100;
-    font-size: 60px;
-      line-height: 1.63;
-  letter-spacing: -0.02em;
-    font-style: inherit;
-    max-width: 480px;
-    text-align: right;
-    right: 4vw;
-    top: 2vh;
-   z-index: 30;
-  }
-
-  .hero-desc-2 {
-  font-weight: 100;
-  font-size: 33px;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
-  color: var(--primary-font-color);
- 
-    top: 8vh;
-right: 4.2vw;
-  max-width: 408px;
-   z-index: 30;
-}
-}
-/*                                               0-374px                                     */
+/*                                  0-374px                                     */
 @media screen and (max-width: 374px) {
   .hero {
     max-width: 280px;

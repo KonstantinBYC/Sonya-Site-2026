@@ -4,18 +4,15 @@
   background-color: rgb(216, 216, 216);
   color: black;
 }
-
 .footer-section .container {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .footer-content {
   margin-bottom: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid black;
 }
-
 .footer-text {
   display: block;
   margin: 0;
@@ -27,18 +24,14 @@
   letter-spacing: -0.02em;
   color: black;
 }
-
-
 .footer-contact-container {
   display: flex;
   justify-content: space-between;
 }
-
 .footer-contact {
   font-style: normal;
    color: black;
 }
-
 .footer-contact-text {
   display: block;
   margin-bottom: 14px;
@@ -47,35 +40,29 @@
   line-height: 1.29;
  color: black;
 }
-
 .footer-contact-list {
   font-size: 18px;
   line-height: 1.29;
   letter-spacing: -0.02em;
  color: black;
 }
-
 .footer-contact-item {
   display: block;
   margin-bottom: 4px;
   color: black;
 }
-
 .footer-contact-link {
   transition: color 250ms var(--timing-function);
    color: black;
 }
-
 .footer-social-media-list {
   display: flex;
   gap: 14px;
 }
-
 .footer-social-media-link {
   color: black;
   transition: color 250ms var(--timing-function);
 }
-
 .footer-icon {
   fill: currentColor;
   display: block;
@@ -119,6 +106,9 @@
 @media screen and (max-width: 767px) {
   .footer-navigation-item:not(:last-child) {
     margin-bottom: 18px;
+  }
+    .footer-section {
+    margin-bottom: 36px;
   }
 }
 
