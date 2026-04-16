@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
  
   <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
   <title>Yaroshenko Art</title>
 
   
@@ -40,63 +40,65 @@
 <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Додаємо бокові відступи до основного контейнера галереї — стрілки не вилазитимуть за край екрану */
-  .lg-outer,
-  .lg-backdrop,
-  .lg-container {
-    padding: 0 40px !important;   /* 40px — комфортний буфер; спробуй 30px або 50px */
+
+/* Контейнери SimpleLightbox */
+.sl-overlay,
+.sl-wrapper,
+.sl-outer,
+.sl-inner {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
-  }
+    padding: 0 !important;           /* прибираємо зайві відступи */
+}
 
-  /* Фіксуємо позицію стрілок — права не йде за правий край */
-  .lg-next {
-    right: 20px !important;       /* 15–30px від правого краю; підбери візуально */
-  }
-
-  .lg-prev {
-    left: 20px !important;
-  }
-
-  /* Робимо стрілки більш видимими/гарними (опціонально) */
-  .lg-next,
-  .lg-prev {
+/* Стрілки (навігація) */
+.sl-navigation .sl-prev,
+.sl-navigation .sl-next {
     width: 50px !important;
     height: 50px !important;
-    background: rgba(0, 0, 0, 0.5) !important;  /* напівпрозорий фон */
+    background: rgba(185, 182, 182, 0.6) !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 30px !important;   /* розмір стрілки */
-    color: white !important;
+    font-size: 28px !important;
+    color: #000000 !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     z-index: 9999 !important;
-  }
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
 
-  /* Якщо стрілки все одно обрізаються — дозволяємо їм "виходити" */
-  .lg-outer {
-    overflow: visible !important;
-  }
+/* Позиціонування стрілок */
+.sl-navigation .sl-prev {
+    left: 12px !important;
+}
 
-  /* Адаптивно для мобілки (якщо проблема тільки там) */
-  @media (max-width: 767px) {
-    .lg-outer,
-    .lg-backdrop {
-      padding: 0 25px !important;   /* менший відступ на маленьких екранах */
+.sl-navigation .sl-next {
+    right: 12px !important;
+}
+
+/* Адаптив для мобільних екранів */
+@media (max-width: 767px) {
+    .sl-navigation .sl-prev,
+    .sl-navigation .sl-next {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 24px !important;
     }
-    .lg-next {
-      right: 15px !important;
-    }
-    .lg-prev {
-      left: 15px !important;
-    }
-  }
+
+    .sl-navigation .sl-prev  { left: 8px !important; }
+    .sl-navigation .sl-next  { right: 8px !important; }
+}
 </style>
 
 
-  <script type="module" crossorigin src="./assets/index-B4C8iIEW.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BtqAkpU_.css">
+  <script type="module" crossorigin src="./assets/index-45EFtydO.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D7A8_qXC.css">
 </head>
 
 <body>
@@ -292,8 +294,8 @@ height="1600"
   class="photo photo-10" alt="main-page-photo"
 />
 <img 
-  src="./assets/img-11-800-CzxRKoLH.jpg"               
-  srcset="./assets/img-11-480-BJ24vKKR.jpg 480w, ./assets/img-11-800-CzxRKoLH.jpg 800w, ./assets/img-11-1200-Cu3qnymo.jpg 1200w"
+  src="./assets/img-11-CzxRKoLH.jpg"               
+  srcset="./assets/img-11-480-BJ24vKKR.jpg 480w, ./assets/img-11-CzxRKoLH.jpg 800w, ./assets/img-11-1200-Cu3qnymo.jpg 1200w"
   sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 
          380px"                                 
@@ -314,8 +316,8 @@ height="1600"
   class="photo photo-12" alt="main-page-photo"
 />
 <img 
-  src="./assets/img-13-DB8v0jrm.jpg"               
-  srcset="./assets/img-13-480-D11_uacV.jpg 480w, ./assets/img-13-DB8v0jrm.jpg 800w, ./assets/img-13-1200-DCAfKB0h.jpg 1200w"
+  src="./assets/img-13-800-DB8v0jrm.jpg"               
+  srcset="./assets/img-13-480-D11_uacV.jpg 480w, ./assets/img-13-800-DB8v0jrm.jpg 800w, ./assets/img-13-1200-DCAfKB0h.jpg 1200w"
   sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 
          380px"                                 
@@ -325,8 +327,8 @@ height="1600"
   class="photo photo-13" alt="main-page-photo"
 />
 <img 
-  src="./assets/img-14-CjVTywzL.jpg"               
-  srcset="./assets/img-14-480-DHUgTIi9.jpg 480w, ./assets/img-14-CjVTywzL.jpg 800w, ./assets/img-14-1200-d5q9F3cT.jpg 1200w"
+  src="./assets/img-14-800-CjVTywzL.jpg"               
+  srcset="./assets/img-14-480-DHUgTIi9.jpg 480w, ./assets/img-14-800-CjVTywzL.jpg 800w, ./assets/img-14-1200-d5q9F3cT.jpg 1200w"
   sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 
          380px"                                 
@@ -430,7 +432,6 @@ Beim Shooting nehme ich mir Zeit, begleite euch aufmerksam und helfe sanft beim 
         </h2>
 
         <ul class="components-list">
-
             <li class="components-list-item">
                 <div class="component-flip-card">
                     <div class="component-flip-card-inner">
@@ -568,8 +569,8 @@ Lieferung innerhalb von 10 Tagen</p>
         <li class="our-products__item swiper-slide">
 
               <img 
-  src="./assets/img-13-DB8v0jrm.jpg"               
-  srcset="./assets/img-13-480-D11_uacV.jpg 480w, ./assets/img-13-DB8v0jrm.jpg 800w, ./assets/img-13-1200-DCAfKB0h.jpg 1200w"
+  src="./assets/img-13-800-DB8v0jrm.jpg"               
+  srcset="./assets/img-13-480-D11_uacV.jpg 480w, ./assets/img-13-800-DB8v0jrm.jpg 800w, ./assets/img-13-1200-DCAfKB0h.jpg 1200w"
   sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 
          380px"                                 
@@ -580,7 +581,7 @@ Lieferung innerhalb von 10 Tagen</p>
 />
           <div class="our-products__descr">
             <h3 class="our-products__name">Personal / Event</h3>
-            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <p class="our-products__type">Beispiel mit mehreren Fotos</p>
             <button class="our-products__price open-gallery" data-gallery="personal">Fotos</button>
           </div>
         </li>
@@ -599,7 +600,7 @@ Lieferung innerhalb von 10 Tagen</p>
 />
           <div class="our-products__descr">
             <h3 class="our-products__name">Hochzeiten</h3>
-            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <p class="our-products__type">Beispiel mit mehreren Fotos</p>
             <button class="our-products__price open-gallery" data-gallery="hochzeiten">Fotos</button>
           </div>
         </li>
@@ -617,7 +618,7 @@ Lieferung innerhalb von 10 Tagen</p>
 />
           <div class="our-products__descr">
             <h3 class="our-products__name">Hochzeitspaket</h3>
-            <p class="our-products__type">вeispiel mit 10 fotos</p>
+            <p class="our-products__type">Beispiel mit mehreren Fotos</p>
             <button class="our-products__price open-gallery" data-gallery="hochzeitspaket">Fotos</button>
           </div>
         </li>
@@ -627,7 +628,6 @@ Lieferung innerhalb von 10 Tagen</p>
 
     <!-- Приховані галереї (не видно на сторінці) -->
 <div class="hidden-galleries">
-
   <!-- personal -->
   <div class="personal-gallery item_gallery" id="personal" style="display: none;">
     <a href="/img/hero/img-1.jpg" data-title="img1">
@@ -646,16 +646,16 @@ Lieferung innerhalb von 10 Tagen</p>
     </a>
        <a href="/img/hero/img-20.jpg" data-title="img1">
     <img 
-        src="./assets/img-20-800-Bwi6_EsN.jpg"               
-        srcset="./assets/img-20-480-8Ba3HED8.jpg 480w, ./assets/img-20-800-Bwi6_EsN.jpg 800w, ./assets/img-20-1200-B9MWNJqp.jpg 1200w"
+        src="./assets/img-20-Bwi6_EsN.jpg"               
+        srcset="./assets/img-20-480-8Ba3HED8.jpg 480w, ./assets/img-20-Bwi6_EsN.jpg 800w, ./assets/img-20-1200-B9MWNJqp.jpg 1200w"
              sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 380px" loading="eager" alt="gallery1" />
     </a>
      </a>
        <a href="/img/hero/img-11.jpg" data-title="img1">
       <img 
-        src="./assets/img-11-800-CzxRKoLH.jpg"               
-        srcset="./assets/img-11-480-BJ24vKKR.jpg 480w, ./assets/img-11-800-CzxRKoLH.jpg 800w, ./assets/img-11-1200-Cu3qnymo.jpg 1200w"
+        src="./assets/img-11-CzxRKoLH.jpg"               
+        srcset="./assets/img-11-480-BJ24vKKR.jpg 480w, ./assets/img-11-CzxRKoLH.jpg 800w, ./assets/img-11-1200-Cu3qnymo.jpg 1200w"
              sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 380px" loading="eager" alt="gallery1" />
     </a>
@@ -683,8 +683,8 @@ Lieferung innerhalb von 10 Tagen</p>
     </a>
       <a href="/img/hero/img-26.jpg" data-title="img1">
         <img 
-        src="./assets/img-26-CPqavtB3.jpg"               
-        srcset="./assets/img-26-480-DoosUelN.jpg 480w, ./assets/img-26-CPqavtB3.jpg 800w, ./assets/img-26-1200-CBEnoN_r.jpg 1200w"
+        src="./assets/img-26-800-CPqavtB3.jpg"               
+        srcset="./assets/img-26-480-DoosUelN.jpg 480w, ./assets/img-26-800-CPqavtB3.jpg 800w, ./assets/img-26-1200-CBEnoN_r.jpg 1200w"
              sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 380px" loading="eager" alt="gallery1" />
     </a>
@@ -743,8 +743,8 @@ Lieferung innerhalb von 10 Tagen</p>
     </a>
     <a href="/img/hero/img-27.jpg" data-title="img1">
         <img 
-        src="./assets/img-27-D3PEWyFc.jpg"               
-        srcset="./assets/img-27-480-9jbHSaBq.jpg 480w, ./assets/img-27-D3PEWyFc.jpg 800w, ./assets/img-27-1200-MFcv_0DN.jpg 1200w"
+        src="./assets/img-27-800-D3PEWyFc.jpg"               
+        srcset="./assets/img-27-480-9jbHSaBq.jpg 480w, ./assets/img-27-800-D3PEWyFc.jpg 800w, ./assets/img-27-1200-MFcv_0DN.jpg 1200w"
              sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 380px" loading="eager" alt="gallery2" />
     </a>
@@ -777,8 +777,8 @@ Lieferung innerhalb von 10 Tagen</p>
     </a>
       <a href="/img/hero/img-33.jpg" data-title="img1">
         <img 
-        src="./assets/img-33-BFl7Ivu9.jpg"               
-        srcset="./assets/img-33-480-B9zDntGE.jpg 480w, ./assets/img-33-BFl7Ivu9.jpg 800w, ./assets/img-33-1200-DfU6-g3M.jpg 1200w"
+        src="./assets/img-33-800-BFl7Ivu9.jpg"               
+        srcset="./assets/img-33-480-B9zDntGE.jpg 480w, ./assets/img-33-800-BFl7Ivu9.jpg 800w, ./assets/img-33-1200-DfU6-g3M.jpg 1200w"
              sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 380px" loading="eager" alt="gallery3" />
     </a>
@@ -791,8 +791,8 @@ Lieferung innerhalb von 10 Tagen</p>
     </a>
       <a href="/img/hero/img-36.jpg" data-title="img1">
         <img 
-        src="./assets/img-36-800-BNKr0iw4.jpg"               
-        srcset="./assets/img-36-480-OOwvIFVp.jpg 480w, ./assets/img-36-800-BNKr0iw4.jpg 800w, ./assets/img-36-1200-VzCf4-_d.jpg 1200w"
+        src="./assets/img-36-BNKr0iw4.jpg"               
+        srcset="./assets/img-36-480-OOwvIFVp.jpg 480w, ./assets/img-36-BNKr0iw4.jpg 800w, ./assets/img-36-1200-VzCf4-_d.jpg 1200w"
              sizes="(max-width: 767px) 100vw, 
          (max-width: 1199px) 50vw, 380px" loading="eager" alt="gallery3" />
     </a>
