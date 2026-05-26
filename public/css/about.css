@@ -96,7 +96,7 @@
 .advantages-text {
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 17.2px;
   text-align: justify;
   line-height: 1.15;
   letter-spacing: -0.03em;
@@ -158,10 +158,10 @@
 .advantages-text {
   font-style: normal;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 17px;
   text-align: justify;
-  line-height: 2.1;
-  letter-spacing: -0.02em;
+  line-height: 1.75;
+  letter-spacing: -0.03em;
   color: black;
 }
   .adv-list-item:not(:last-of-type)::after {
