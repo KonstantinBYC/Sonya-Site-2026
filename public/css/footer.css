@@ -1,8 +1,8 @@
 .footer-section {
   padding: 32px 0;
-  padding-bottom: 32px;
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(204, 204, 204);
   color: black;
+  margin: 0;
 }
 .footer-section .container {
   margin: 0 auto;
@@ -107,9 +107,7 @@
   .footer-navigation-item:not(:last-child) {
     margin-bottom: 18px;
   }
-    .footer-section {
-    margin-bottom: 36px;
-  }
+   
 }
 
 @media screen and (min-width: 768px) {
