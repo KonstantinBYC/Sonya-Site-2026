@@ -331,12 +331,12 @@
     max-width: 1920px;
     margin: 0px auto;
     position: relative;
-      height: auto;
-      min-height: auto;
-      overflow: hidden;
-      display: grid;
-      padding-top: 0px;
-        margin-bottom: 150px;
+    height: auto;
+    min-height: auto;
+    overflow: hidden;
+    display: grid;
+    padding-top: 0px;
+    margin-bottom: 150px;
   }
   .hero-desc {
     position: absolute;
@@ -352,16 +352,16 @@
    z-index: 30;
   }
   .hero-desc-2 {
-     position: absolute;
+  position: absolute;
   font-weight: 100;
   font-size: 33px;
   line-height: 1.6;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.23em;
   color: var(--primary-font-color);
-  right: 3.3vw;
-  top: 9.9vh;
+  right: 3.5vw;
+  top: 11vh;
   max-width: 408px;
-   z-index: 30;
+  z-index: 30;
 }
 
 .gallery {
@@ -397,10 +397,10 @@
     /* позиціонування конкретних фото */
     .photo-1 { grid-area: 1 / 1 / 3 / 2; 
        scale: 100%;
-     }          /* великий лівий портрет */
+     }          
     .photo-2 { grid-area: 1 / 2 / 2 / 3;
-     scale: 100%;  }          /* середній верхній */
-    .photo-3 { grid-area: 2 / 2 / 3 / 3;  }          /* середній нижній */
+     scale: 100%;  }         
+    .photo-3 { grid-area: 2 / 2 / 3 / 3;  }         
     .photo-4 { grid-area: 1 / 3 / 3 / 4;    }          /* великий правий портрет */
 
     .photo-5 {
@@ -421,29 +421,27 @@
     grid-area: 5 / 1 / 7 / 2; 
   aspect-ratio: 4 / 5;}   /* 2 рядки */
   .photo-10 {
-    grid-area: 5 / 2 / 7 / 3; 
+    grid-area: 6 / 3 / 7 / 4; 
     aspect-ratio: 4 / 5;   }   /* 2 рядки */
   .photo-11 { grid-area: 5 / 3 / 6 / 4; }   /* 1 рядок */
-  .photo-12 { grid-area: 6 / 3 / 7 / 4; 
+  .photo-12 { grid-area: 5 / 2 / 7 / 3; 
     aspect-ratio: 4 / 5;  }   /* 1 рядок */
-    
-    .photo-13 {    
+  .photo-13 {    
  grid-area: 7 / 1 / 9 / 2; 
      scale: 100%;
     }
-     .photo-14 {    
+  .photo-14 {    
  grid-area: 7 / 2 / 8 / 3; 
      scale: 100%;
     }
-         .photo-15 {    
+  .photo-15 {    
  grid-area: 8 / 2 / 9 / 3; 
      scale: 100%;
     }
-     .photo-16 {    
+  .photo-16 {    
  grid-area: 7 / 3 / 9 / 4; 
      scale: 100%;
     }
-
 }
 /*                                  0-374px                                     */
 @media screen and (max-width: 374px) {
